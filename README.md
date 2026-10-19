@@ -1,5 +1,2 @@
-# Python学习
-
-#### 介绍
-一些学习python相关的
-
+# Python_Learning
+一些python复习的知识相关
