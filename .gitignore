@@ -20,5 +20,6 @@ Thumbs.db
 Desktop.ini
 .venv/
 venv/
-
+/README.en.md
+/README.md
 # 已被 Git 跟踪的文件不会因为添加规则而自动取消跟踪。
