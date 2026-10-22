@@ -22,4 +22,6 @@ Desktop.ini
 venv/
 02python_advanced/07flask/笔记.md
 02python_advanced/08fastapi/笔记.md
+02python_advanced/07flask/FlaskProject/requirements.txt
+02python_advanced/08fastapi/FastAPI_Project/requirements.txt
 # 已被 Git 跟踪的文件不会因为添加规则而自动取消跟踪。
