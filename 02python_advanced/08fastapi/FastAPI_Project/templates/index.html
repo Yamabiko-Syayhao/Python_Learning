@@ -14,8 +14,20 @@
     <button onclick="handle(3)">get请求路径参数</button>
     <button onclick="handle(4)">post请求-form</button>
     <button onclick="handle(5)">post请求-json</button>
-    <button onclick="handle(6)">put请求</button>
+    <button onclick="handle(6)">put请求-json</button>
+    <button onclick="handle(7)">delete请求-json</button>
+    <button onclick="handle(8)">put请求-form</button>
+    <button onclick="handle(9)">delete请求-form</button>
     <button onclick="goOut()">退出登录</button>
+    <br> <!-- 换行 -->
+    <button onclick="handleDb(1)">数据库添加数据--form形式</button>
+    <button onclick="handleDb_2_json()">数据库添加数据--json形式</button>
+    <br>
+    <button onclick="handle_delete_data()">数据库删除数据--json形式</button>
+    <button onclick="handle_delete_data2()">数据库删除数据--form形式</button>
+    <br>
+    <button onclick="handle_check_data()">数据库查询数据</button>
+
     <script>
         // 本地存储 localStorage
         // 存 localStorage.setItem("属性名",值)
@@ -43,46 +55,54 @@
 
             }else if(val == 2){
                 // 调接口 调取一个需要参数的接口api
-                    fetch('http://127.0.0.1:8000/api/getList?userName=admin&passWord=123456',{
-                    method:'get'
+                    fetch('http://127.0.0.1:8000/api/getList?page=1&pageSize=5',{
+                    method:'get',
+                    headers:{
+                        "token":localStorage.getItem("small_token")
+                        }
                 }).then(res=>res.json())
                 .then((res)=>{
                     console.log(res,"后端返回的数据");
                 })
             }else if(val == 3){
                 // 调接口 调取一个路径参数的接口api
-                    fetch('http://127.0.0.1:8000/api/list/arl/1234',{
-                    method:'get'
+                    fetch('http://127.0.0.1:8000/api/list/arl',{
+                    method:'get',
+                    headers:{
+                        "token":localStorage.getItem("small_token")
+                    }
                 }).then(res=>res.json())
                 .then((res)=>{
                     console.log(res,"后端返回的数据");
                 })
             }else if(val == 4){
                 // 调接口 调取一个post请求-form的接口api
-                    fetch('http://127.0.0.1:8000/api/form',{
+                    fetch('http://127.0.0.1:8000/api/post_form',{
                     method:'post',
                     headers:{
                         // 请求头 表单格式
-                        "Content-Type":"application/x-www-form-urlencoded"
+                        "Content-Type":"application/x-www-form-urlencoded",
+                        "token":localStorage.getItem("small_token")
                     },
-                    body:"userName=admin&passWord=123456"
+                    body:"userName=admin&passWord=1234"
                 }).then(res=>res.json())
                 .then((res)=>{
                     console.log(res,"后端返回的数据");
                 })
             }else if(val == 5){
                 // 调接口 调取一个post请求-json的接口api
-                    fetch('http://127.0.0.1:8000/api/data',{
+                    fetch('http://127.0.0.1:8000/api/post_json',{
                     method:'post',
                     headers:{
                         // 请求头 json形式
-                        "Content-Type":"application/json"
+                        "Content-Type":"application/json",
+                        "token":localStorage.getItem("small_token")
                     },
                         // JSON.stringify() 转为字符串形式
                     body:JSON.stringify(
                         {
-                            userName:"val",
-                            eat:"饺子"
+                            userName:"admin",
+                            passWord:"1234"
                         }
                     )
                 }).then(res=>res.json())
@@ -95,33 +115,59 @@
                     method:'put',
                     headers:{
                         // 请求头 json形式
-                        "Content-Type":"application/json"
+                        "Content-Type":"application/json",
+                        "token":localStorage.getItem("small_token")
                     },
                         // JSON.stringify() 转为字符串形式
+                        // id要传字符串 后端模型里id定义的是str
                     body:JSON.stringify(
                         {
-                            id:1,
-                            userName:"val",
-                            eat:"面条"
+                            id:"1",
+                            userName:"val"
                         }
                     )
                 }).then(res=>res.json())
                 .then((res)=>{
                     console.log(res,"后端返回的数据");
                 })
-            }else{
-                // 调接口 调取一个delete请求-json的接口api
-                    fetch('http://127.0.0.1:8000/api/delete',{
+            }else if(val == 8){
+                // 调接口 调取一个put请求-form的接口api
+                    fetch('http://127.0.0.1:8000/api/put_form',{
+                    method:'put',
+                    headers:{
+                        // 请求头 表单格式
+                        "Content-Type":"application/x-www-form-urlencoded",
+                        "token":localStorage.getItem("small_token")
+                    },
+                        // 表单是字符串拼接 不用JSON.stringify
+                    body:"id=1&userName=val"
+                }).then(res=>res.json())
+                .then((res)=>{
+                    console.log(res,"后端返回的数据");
+                })
+            }else if(val == 9){
+                // 调接口 调取一个delete请求-form的接口api
+                    fetch('http://127.0.0.1:8000/api/delete_form',{
                     method:'delete',
                     headers:{
-                        // 请求头 json形式
-                        "Content-Type":"application/json"
+                        // 请求头 表单格式
+                        "Content-Type":"application/x-www-form-urlencoded",
+                        "token":localStorage.getItem("small_token")
                     },
-                    body:JSON.stringify(
-                        {
-                            id:1
-                        }
-                    )
+                    body:"id=1"
+                }).then(res=>res.json())
+                .then((res)=>{
+                    console.log(res,"后端返回的数据");
+                })
+            }else{
+                // 调接口 调取一个delete请求的接口api
+                // delete的参数通过url查询参数传 ?id=1 不需要请求体(form)
+                    fetch('http://127.0.0.1:8000/api/delete?id=1',{
+                    method:'delete',
+                    headers:{
+                        // delete通过url查询参数传参 不需要Content-Type
+                        "token":localStorage.getItem("small_token")
+                    }
                 }).then(res=>res.json())
                 .then((res)=>{
                     console.log(res,"后端返回的数据");
@@ -130,17 +176,110 @@
         }
     //     退出登录
     function goOut(){
-            fetch('http://127.0.0.1:8000/api/logout',{
-                method:'get',
-                headers:{
-                    "token":localStorage.getItem("small_token")
-                }
-            }).then(res=>res.json())
-                .then((res)=>{
+            // 删除缓存
+            //弹出 退出成功
+            //退出就不用发请求了所以没有上面的步骤了
                     localStorage.removeItem("small_token")
+                    localStorage.removeItem("userName")
+                    localStorage.removeItem("passWord")
+                    localStorage.removeItem("张三")
+                    alert("退出成功！")
                     location.href = "login.html"
-                })
+
     }
+    // 操作数据库 form形式
+        function handleDb(item) {
+            if (item == 1) {
+
+                // 调接口 调取一个不需要参数的接口api
+                fetch('http://127.0.0.1:8000/apiServer/add', {
+                    method: 'post',
+                    headers: {
+                        "Content-Type": "application/x-www-form-urlencoded",
+                        "token": localStorage.getItem("small_token")
+                    },
+                    // 防止乱码
+                    body: new URLSearchParams("userName=Miyako&english=98&python=50&java=50")
+                }).then(res => res.json())
+                    .then((res) => {
+                        console.log(res, "后端返回的数据");
+                    })
+            }
+        }
+        // 操作数据库 json格式
+        function handleDb_2_json(){
+            fetch('http://127.0.0.1:8000/apiServer/dataBase',{
+                    method:'post',
+                    headers:{
+                        // 请求头 json形式
+                        "Content-Type":"application/json",
+                        "token":localStorage.getItem("small_token")
+                    },
+                        // JSON.stringify() 转为字符串形式
+                    body:JSON.stringify(
+                        {
+                            userName:"arl",
+                            english:98,
+                            python:68,
+                            java:77
+                        }
+                    )
+                }).then(res=>res.json())
+                .then((res)=>{
+                    console.log(res,"后端返回的数据");
+                })
+        }
+
+        function handle_delete_data(){
+            fetch('http://127.0.0.1:8000/apiServer/delete_data',{
+                    method:'delete',
+                    headers:{
+                        // 请求头 json形式
+                        "Content-Type":"application/json",
+                        "token":localStorage.getItem("small_token")
+                    },
+                        // JSON.stringify() 转为字符串形式
+                    body:JSON.stringify(
+                        {
+                            id:2
+                        }
+                    )
+                }).then(res=>res.json())
+                .then((res)=>{
+                    console.log(res,"后端返回的数据");
+                })
+
+        }
+        function handle_delete_data2(){
+            fetch('http://127.0.0.1:8000/apiServer/del_data',{
+                    method:'delete',
+                    headers:{
+                        // 请求头 form形式
+                        "Content-Type":"application/x-www-form-urlencoded",
+                        "token":localStorage.getItem("small_token")
+                    },
+                        // JSON.stringify() 转为字符串形式
+                    body:"id=6"
+                }).then(res=>res.json())
+                .then((res)=>{
+                    console.log(res,"后端返回的数据");
+                })
+
+        }
+
+        // 关联查询
+        function handle_check_data(){
+            fetch('http://127.0.0.1:8000/apiServer/user_role',{
+                    method:'get',
+                    headers:{
+                        "token":localStorage.getItem("small_token")
+                    }
+                        // JSON.stringify() 转为字符串形式
+                }).then(res=>res.json())
+                .then((res)=>{
+                    console.log(res,"后端返回的数据");
+                })
+        }
     </script>
 </body>
 </html>

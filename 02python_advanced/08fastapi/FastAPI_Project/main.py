@@ -4,6 +4,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 # 引入自定义的路由模块
 from api.json_api import router as api_router
+from api.user_api import router as user_router
 
 # 创建了一个fastapi实例，相当于启动了一个后端服务
 app = FastAPI()
@@ -22,6 +23,7 @@ app.add_middleware(
 # 将定义好的路由文件 放在fastapi的实例上
 # 将json_api中左右的接口放在主应用上
 app.include_router(api_router)
+app.include_router(user_router)
 
 
 # 下边俩就是要写的接口    "/" 就是默认打开的内容

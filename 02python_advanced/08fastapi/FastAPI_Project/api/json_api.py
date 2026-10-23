@@ -1,4 +1,5 @@
 # 纯展示 不操作数据库 post/get/delete/put
+from typing import Annotated
 from fastapi import APIRouter,Form,Depends
 from pydantic import BaseModel
 # 引入jwt验证
@@ -69,10 +70,135 @@ def get_site(user:str = Depends(verify_token)):
         "msg": "请求成功"
     }
 
-# 退出登录
-@router.get("/logout")
-def logout(user:str = Depends(UserData)):
+# ========== get请求有参数 ==========
+@router.get("/getList")
+def get_List(page:str,pageSize:str,user:str = Depends(verify_token)):
     return {
         "code": 200,
-        "msg":"请求成功,登录状态已退出"
+        "msg": "请求成功",
+        "page": page,
+        "pageSize": pageSize
     }
+
+
+# ========== get请求有参数 路劲参数 ==========
+@router.get("/list/{name}")
+def get_List(name:str,user:str = Depends(verify_token)):
+    return {
+        "code": 200,
+        "msg": "请求成功",
+
+    }
+
+# ========== post请求form形式 ==========
+# 表单想用模型接收 必须写成Annotated[模型, Form()]
+# 不能写data:Form() 那样Form()会被当成类型注解 启动直接报错
+@router.post("/post_form")
+def post_form(data:Annotated[UserData,Form()],user:str = Depends(verify_token)):
+    userName = data.userName
+    passWord = data.passWord
+    if userName == "admin" and passWord == "1234":
+        return {
+            "code": 200,
+            "msg":"请求成功",
+            "userName":userName
+        }
+    else:
+        return {
+            "code": 200,
+            "msg":"请求失败"
+        }
+# ========== post请求json形式 ==========
+# json请求体直接用模型接收 不需要Annotated和Form()
+@router.post("/post_json")
+def post_json(data:UserData,user:str = Depends(verify_token)):
+    userName = data.userName
+    passWord = data.passWord
+    if userName == "admin" and passWord == "1234":
+        return {
+            "code": 200,
+            "msg":"请求成功",
+            "userName":userName
+        }
+    else:
+        return {
+            "code": 200,
+            "msg":"请求失败"
+        }
+
+
+# ========== put请求 ==========
+# 定义put请求的json请求体模型 前端用application/json传参
+# 注意id在模型里是str 前端必须传字符串"1" 传数字1会校验失败(422)
+class PutData(BaseModel):
+    id:str
+    userName:str
+@router.put("/put")
+def put_List(data:PutData,user:str = Depends(verify_token)):
+    # data是json请求体 不是查询参数
+    # id为空给出提示 否则返回成功
+    if not data.id:
+        return {
+            "code": 200,
+            "msg":"缺少参数"
+        }
+    else:
+        return {
+            "code": 200,
+            "msg": "成功",
+
+        }
+
+
+# ========== put请求-form写法 ==========
+# 另一种写法：参数放在表单请求体里 不是json也不是查询参数
+# 前端请求头必须是application/x-www-form-urlencoded
+@router.put("/put_form")
+def put_form(id:str = Form(),userName:str = Form(),user:str = Depends(verify_token)):
+    if not id:
+        return {
+            "code": 200,
+            "msg":"缺少参数"
+        }
+    else:
+        return {
+            "code": 200,
+            "msg": "成功",
+
+        }
+
+
+# ========== delete请求有参数 ==========
+# delete不用Form()取请求体 直接用查询参数 ?id=1
+# 前端请求时把id拼在url上 请求头只需带token
+@router.delete("/delete")
+def del_form(id:str,user:str = Depends(verify_token)):
+    if not id:
+        return {
+            "code": 200,
+            "msg": "缺少必要参数",
+
+        }
+    else:
+        return {
+            "code": 200,
+            "msg":"删除成功"
+        }
+
+
+# ========== delete请求有参数-form写法 ==========
+# 参数放在表单请求体里 不再拼在url查询参数上
+# 注意：DELETE带body部分浏览器/代理会丢弃 这里只为演示form写法
+@router.delete("/delete_form")
+def del_form_body(id:str = Form(),user:str = Depends(verify_token)):
+    if not id:
+        return {
+            "code": 200,
+            "msg": "缺少必要参数",
+
+        }
+    else:
+        return {
+            "code": 200,
+            "msg":"删除成功"
+        }
