@@ -21,7 +21,7 @@
 
 
     <script>
-        {#测试跨域#}
+        // {#测试跨域#}
         function handleK(){
               fetch('http://www.buchouyang.com/stage-api/website/getNewsList',{
                 method:'get',
@@ -71,7 +71,7 @@
                         // 请求头 表单格式
                         "Content-Type":"application/x-www-form-urlencoded"
                     },
-                {#请求头#}
+                // {#请求头#}
                     body:"userName=admin&passWord=123456"
                 }).then(res=>res.json())
                 .then((res)=>{
@@ -85,7 +85,7 @@
                         // 请求头 json形式
                         "Content-Type":"application/json"
                     },
-                {#请求头#}
+                // {#请求头#}
                         // JSON.stringify() 转为字符串形式
                     body:JSON.stringify(
                         {
