@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录</title>
+</head>
+<body>
+<input type="text" placeholder="请输入账号" id="ipt1">
+<input type="text" placeholder="请输入密码" id="ipt2">
+<button onclick="handleClick()">登录-form</button>
+<button onclick="handleClick_1()">登录2-json</button>
+
+
+<script>
+    function handleClick() {
+        // 获取两个input框中的内容
+        ipt1 = document.querySelector('#ipt1').value
+        ipt2 = document.querySelector('#ipt2').value
+        // .value表示取里面的值 querySelector是在网页中找到id=这个值标签
+
+        // 控制台打印一下这俩值 给自己看看
+        // console.log(ipt1)
+        // console.log(ipt2)
+        // 接下来就要调取后端写好的登录接口了
+        fetch("http://127.0.0.1:8000/api/login", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            // "userName=admin&passWord=12456"
+            // ${变量名} 模板字符串
+            body: `userName=${ipt1}&passWord=${ipt2}`
+        }).then(res => res.json())
+            .then((data) => {
+                console.log(data,"后端返回的内容")
+            })
+    }
+    function handleClick_1() {
+        // 获取两个input框中的内容
+        ipt1 = document.querySelector('#ipt1').value
+        ipt2 = document.querySelector('#ipt2').value
+        // .value表示取里面的值 querySelector是在网页中找到id=这个值标签
+
+        // 控制台打印一下这俩值 给自己看看
+        // console.log(ipt1)
+        // console.log(ipt2)
+        // 接下来就要调取后端写好的登录接口了
+        fetch("http://127.0.0.1:8000/api/login_json", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            // "userName=admin&passWord=12456"
+            // ${变量名} 模板字符串
+            body: JSON.stringify({
+                "userName": ipt1,
+                "passWord": ipt2
+            })
+        }).then(res => res.json())
+            .then((data) => {
+                if (data.code == 200){
+                    // 可以拿到token 保存在浏览器的缓存中
+                    // localStorage.setItem("属性",具体的值)
+                    localStorage.setItem("small_token", data.token)
+                    localStorage.setItem("userName", data.userName)
+                    localStorage.setItem("passWord", data.passWord)
+                    localStorage.setItem("张三", "hello")
+
+                    // 跳转到某个页面
+                    location.href = "index.html"
+                }
+            })
+    }
+</script>
+
+</body>
+</html>
+

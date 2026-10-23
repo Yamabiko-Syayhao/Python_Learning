@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+</head>
+<body>
+    fastapi
+    <button onclick="handle(1)">get请求无参数</button>
+    <button onclick="handle(2)">get请求有参数</button>
+    <button onclick="handle(3)">get请求路径参数</button>
+    <button onclick="handle(4)">post请求-form</button>
+    <button onclick="handle(5)">post请求-json</button>
+    <button onclick="handle(6)">put请求</button>
+    <button onclick="goOut()">退出登录</button>
+    <script>
+        // 本地存储 localStorage
+        // 存 localStorage.setItem("属性名",值)
+        // 取 localStorage.getItem("属性名")
+        // 删 localStorage.removeItem("属性名")
+        // 作为后端，除了登录注册外，其余接口都要token请求头
+
+        // 用户登录成功之后 --> 后端返回token给前端用户 --> 前端用户要带着token（在请求头中）去访问其他api接口
+        // 其他接口api --> 解析前端请求头中带来的token --> 返回
+
+
+        function handle(val){
+            if(val == 1){
+
+                    // 调接口 调取一个不需要参数的接口api
+                    fetch('http://127.0.0.1:8000/api/site',{
+                    method:'get',
+                    headers:{
+                        "token":localStorage.getItem("small_token")
+                    }
+                }).then(res=>res.json())
+                .then((res)=>{
+                    console.log(res,"后端返回的数据");
+                })
+
+            }else if(val == 2){
+                // 调接口 调取一个需要参数的接口api
+                    fetch('http://127.0.0.1:8000/api/getList?userName=admin&passWord=123456',{
+                    method:'get'
+                }).then(res=>res.json())
+                .then((res)=>{
+                    console.log(res,"后端返回的数据");
+                })
+            }else if(val == 3){
+                // 调接口 调取一个路径参数的接口api
+                    fetch('http://127.0.0.1:8000/api/list/arl/1234',{
+                    method:'get'
+                }).then(res=>res.json())
+                .then((res)=>{
+                    console.log(res,"后端返回的数据");
+                })
+            }else if(val == 4){
+                // 调接口 调取一个post请求-form的接口api
+                    fetch('http://127.0.0.1:8000/api/form',{
+                    method:'post',
+                    headers:{
+                        // 请求头 表单格式
+                        "Content-Type":"application/x-www-form-urlencoded"
+                    },
+                    body:"userName=admin&passWord=123456"
+                }).then(res=>res.json())
+                .then((res)=>{
+                    console.log(res,"后端返回的数据");
+                })
+            }else if(val == 5){
+                // 调接口 调取一个post请求-json的接口api
+                    fetch('http://127.0.0.1:8000/api/data',{
+                    method:'post',
+                    headers:{
+                        // 请求头 json形式
+                        "Content-Type":"application/json"
+                    },
+                        // JSON.stringify() 转为字符串形式
+                    body:JSON.stringify(
+                        {
+                            userName:"val",
+                            eat:"饺子"
+                        }
+                    )
+                }).then(res=>res.json())
+                .then((res)=>{
+                    console.log(res,"后端返回的数据");
+                })
+            }else if(val == 6){
+                // 调接口 调取一个put请求-json的接口api
+                    fetch('http://127.0.0.1:8000/api/put',{
+                    method:'put',
+                    headers:{
+                        // 请求头 json形式
+                        "Content-Type":"application/json"
+                    },
+                        // JSON.stringify() 转为字符串形式
+                    body:JSON.stringify(
+                        {
+                            id:1,
+                            userName:"val",
+                            eat:"面条"
+                        }
+                    )
+                }).then(res=>res.json())
+                .then((res)=>{
+                    console.log(res,"后端返回的数据");
+                })
+            }else{
+                // 调接口 调取一个delete请求-json的接口api
+                    fetch('http://127.0.0.1:8000/api/delete',{
+                    method:'delete',
+                    headers:{
+                        // 请求头 json形式
+                        "Content-Type":"application/json"
+                    },
+                    body:JSON.stringify(
+                        {
+                            id:1
+                        }
+                    )
+                }).then(res=>res.json())
+                .then((res)=>{
+                    console.log(res,"后端返回的数据");
+                })
+            }
+        }
+    //     退出登录
+    function goOut(){
+            fetch('http://127.0.0.1:8000/api/logout',{
+                method:'get',
+                headers:{
+                    "token":localStorage.getItem("small_token")
+                }
+            }).then(res=>res.json())
+                .then((res)=>{
+                    localStorage.removeItem("small_token")
+                    location.href = "login.html"
+                })
+    }
+    </script>
+</body>
+</html>
