@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景</title>
+    <style>
+        div{
+            width: 1000px;
+            height: 500px;
+            /* 块  居中 */
+            margin: auto;
+            /* 1.背景颜色 */
+            background-color: pink;
+            /* 2.背景图 */
+            background-image: url(images/happy.gif);
+            /* 
+                3.背景图是否重复 
+                    no-repeat 不重复   ***
+                    repeat-x 水平方向重复
+                    repeat-y 垂直方向重复
+            */
+            background-repeat: no-repeat;
+            /* 
+                4.背景图大小
+                background-size:宽度 高度; 宽高都写容易拉伸变形
+                background-size:宽度; *** 只写宽度  高度会根据你写的宽度去自适应
+            */
+            background-size: 100px;
+            /* 
+                5.背景图定位
+                background-position:背景图的水平位置 背景图的垂直位置;
+                英文单词  水平方向 左中右 left center right
+                         垂直方向  上中下 top center bottom
+                也可以写具体的像素
+            */
+            /* background-position: center center; */
+            /* background-position: right bottom; */
+            /* 如果只写了一个参数  那么第二个参数也就是垂直方向默认居中 */
+            /* background-position: right; */
+            background-position: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

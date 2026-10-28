@@ -1,0 +1,1 @@
+{"version":3,"file":"car.js","sources":["../../TOOL/HBuilderX/plugins/uniapp-cli-vite/uniPage:/cGFnZXMvY2FyL2Nhci51dnVl"],"sourcesContent":["import MiniProgramPage from 'S:/uniapp-project/test/pages/car/car.uvue'\nwx.createPage(MiniProgramPage)"],"names":[],"mappings":";;;;;;;;;;;AACA,GAAG,WAAW,eAAe;"}

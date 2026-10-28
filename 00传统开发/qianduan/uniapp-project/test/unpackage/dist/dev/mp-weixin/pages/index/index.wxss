@@ -1,0 +1,13 @@
+@import "../../uvue.wxss";
+:host{display:flex;flex-direction:column}
+
+.logo[class] {
+		height: 100px;
+		width: 100px;
+		margin: 100px auto 25px auto;
+}
+.title[class] {
+		font-size: 18px;
+		color: #8f8f94;
+		text-align: center;
+}

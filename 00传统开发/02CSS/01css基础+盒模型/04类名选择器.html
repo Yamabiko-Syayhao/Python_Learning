@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>类名选择器</title>
+    <style>
+        /* 
+            .类名{
+                样式
+            }
+        */
+        .lzh{
+            width: 300px;
+            height: 100px;
+            background-color: blue;
+        }
+        /* 需求 给第二个h1 设置300*100 红色背景 */
+        .dxc{
+            width: 300px;
+            height: 100px;
+            background-color: red;
+        }
+        .zxc{
+            background-color: yellow;
+        }
+        h1{
+            background-color: pink;
+            color: #fff;
+        }
+        /* 权重问题  标签选择器1   类名选择器10 */
+    </style>
+</head>
+<body>
+    <!-- 
+        给每一个标签起了一个名字
+        class="类名"
+        可以重复使用
+        一个标签可以有多个类名 多个类名之间用空格 隔开
+    -->
+    <h1 class="lzh zxc">我叫李子豪</h1>
+    <h1 class="dxc">我叫段学诚</h1>
+    <h1 class="dxc">我叫郭丰照</h1>
+</body>
+</html>

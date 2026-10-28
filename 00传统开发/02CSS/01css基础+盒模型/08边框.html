@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>边框</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            /*边框   
+                border: 边框的粗细 边框的样式 边框的颜色;
+
+                边框的样式 solid实线   dashed虚线   dotted点线
+            */
+            /* border: 10px solid red; */
+
+            /* 单独设置某一边 */
+            border-left: 10px solid red;
+            /* 需求 上边框 10像素虚线蓝色    右边框 10像素点线绿色   下边框 10像素实线粉色*/
+            border-top: 10px dashed blue;
+            border-right: 10px dotted green;
+            border-bottom: 10px solid pink;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        良子去爬泰山
+    </div>
+</body>
+</html>

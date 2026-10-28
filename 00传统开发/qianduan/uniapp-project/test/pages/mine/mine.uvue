@@ -1,0 +1,177 @@
+<template>
+	<view class="my-container">
+		<view class="user-list">
+			<view class="user-card" v-for="(item, index) in userList" :key="index">
+				<image class="avatar" :src="item.avatar" mode="aspectFill"></image>
+				<view class="user-info">
+					<view class="name-row">
+						<text class="name">{{ item.name }}</text>
+						<text class="age">{{ roleText(item.role) }}</text>
+					</view>
+					<text class="desc">{{ item.userName }} · 创建于 {{ item.createdAt }}</text>
+				</view>
+			</view>
+		</view>
+		<view class="load-more">
+			<text v-if="loading">加载中...</text>
+			<text v-else-if="noMore">没有更多了</text>
+		</view>
+	</view>
+</template>
+
+<!-- ！分页加载/触底就去加载更多，一直到 -->
+<script setup>
+	import { ref } from 'vue'
+	import { onLoad, onReachBottom } from '@dcloudio/uni-app'
+	import { request } from '@/utilis/request.js'
+
+	// 角色列表没有头像字段，使用本地默认头像
+	const defaultAvatar = '/static/logo.png'
+
+	const userList = ref([])
+	const page = ref(1)
+	const rows = ref(10)
+	const total = ref(0)
+	const loading = ref(false)
+	const noMore = ref(false)
+
+	// 角色：1 超级管理员 2 管理员 3 普通用户
+	const roleMap = {
+		1: '超级管理员',
+		2: '管理员',
+		3: '普通用户'
+	}
+	const roleText = (role) => roleMap[role] || '未知角色'
+
+	// 获取角色列表
+	const getUserList = () => {
+		if (loading.value || noMore.value) return
+		loading.value = true // 这里为true代表会显示加载中
+		request({
+			// 1.4.1 角色列表：GET admin，参数 page、rows
+			url: '/admin',
+			method: 'GET',
+			data: {
+				page: page.value,
+				rows: rows.value
+			},
+			// 接口要求在请求头中使用 token 字段携带令牌
+			header: {
+				token: uni.getStorageSync('token')
+			},
+			success: (res) => {
+				console.log(res)
+				if (res.data.code === 200) { //=== 代表数据类型和值必须一样
+					const list = (res.data.data.list || []).map(item => ({
+						//如果左边是 null、undefined 等假值，就使用空数组 []
+						...item,
+						avatar: item.avatar || defaultAvatar,
+						// 如果用户头像不存在或是空字符串，就使用默认头像
+					}))
+					userList.value = [...userList.value, ...list]
+					total.value = res.data.data.count || 0
+					if (userList.value.length >= total.value) {
+						noMore.value = true
+					} else {
+						page.value++
+					}
+				} else {
+					uni.showToast({
+						title: res.data.msg || '获取列表失败',
+						icon: 'none'
+					})
+				}
+			},
+			fail: () => {
+				uni.showToast({
+					title: '网络请求失败',
+					icon: 'none'
+				})
+			},
+			complete: () => {
+				loading.value = false
+			}
+		})
+	}
+
+	onLoad(() => {
+		getUserList()
+	})
+
+	onReachBottom(() => {
+		getUserList()
+	})
+</script>
+
+<style>
+	.my-container {
+		min-height: 100vh;
+		background-color: #f8f8f8;
+		padding: 24rpx;
+	}
+
+	.user-list {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.user-card {
+		display: flex;
+		align-items: center;
+		background-color: #fff;
+		border-radius: 16rpx;
+		padding: 24rpx;
+		margin-bottom: 24rpx;
+	}
+
+	.avatar {
+		width: 100rpx;
+		height: 100rpx;
+		border-radius: 50%;
+		margin-right: 24rpx;
+		flex-shrink: 0;
+	}
+
+	.user-info {
+		display: flex;
+		flex-direction: column;
+		overflow: hidden;
+	}
+
+	.name-row {
+		display: flex;
+		align-items: center;
+		margin-bottom: 12rpx;
+	}
+
+	.name {
+		font-size: 32rpx;
+		font-weight: bold;
+		color: #333;
+		margin-right: 16rpx;
+	}
+
+	.age {
+		font-size: 24rpx;
+		color: #999;
+	}
+
+	.desc {
+		font-size: 26rpx;
+		color: #666;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+	.load-more {
+		display: flex;
+		justify-content: center;
+		padding: 24rpx 0;
+	}
+
+	.load-more text {
+		font-size: 26rpx;
+		color: #999;
+	}
+</style>

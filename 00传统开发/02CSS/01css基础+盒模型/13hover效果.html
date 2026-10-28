@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hover效果</title>
+    <style>
+        a{
+            color: red;
+            background-color: yellow;
+            /* 去掉下划线 */
+            text-decoration: none;
+        }
+        /* hover 鼠标指向元素的时候换个样式 */
+        a:hover{
+            color: yellow;
+            background-color: red;
+        }
+        .box{
+            font-size: 20px;
+        }
+        .box:hover{
+            /* 加下划线 */
+            /* text-decoration: underline; */
+            border-bottom: 1px solid #666;
+            width: 240px;
+            /* 鼠标样式  变小手 */
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- 需求  点击这个a标签跳转到03图片标签.html页面中 -->
+    <a href="../../01HTML/03图片标签.html">跳转</a>
+
+    <p class="box">联想官网-联想超级联萌节</p>
+</body>
+</html>

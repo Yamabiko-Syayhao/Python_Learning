@@ -1,0 +1,1 @@
+{"version":3,"file":"mine.js","sources":["../../TOOL/HBuilderX/plugins/uniapp-cli-vite/uniPage:/cGFnZXMvbWluZS9taW5lLnV2dWU"],"sourcesContent":["import MiniProgramPage from 'S:/uniapp-project/test/pages/mine/mine.uvue'\nwx.createPage(MiniProgramPage)"],"names":[],"mappings":";;;;;;;;;;;;;AACA,GAAG,WAAW,eAAe;"}

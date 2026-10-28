@@ -1,0 +1,49 @@
+<template>
+	<!-- 
+	view相当于div 用来包裹各种内容 
+	text相当于span 通常用来放文本
+	image 图片
+	-->
+	
+	<view>
+		<image class="logo" src="/static/logo.png"></image>
+		<text class="title">{{title}}</text>
+		
+	</view>
+	
+</template>
+
+<script setup>
+const title = ref('Hello')
+
+// 页面首次加载
+onLoad(() => {
+  console.log('首页加载')
+})
+
+// 页面每次显示，包括切换 tab 回来
+onPageShow(() => {
+  console.log('进入首页页面')
+})
+
+// 页面隐藏，包括切换到其他 tab
+onPageHide(() => {
+  console.log('离开首页页面')
+})
+</script>
+
+<style>
+	.logo {
+		height: 100px;
+		width: 100px;
+		margin: 100px auto 25px auto;
+	}
+
+	.title {
+		font-size: 18px;
+		color: #8f8f94;
+		text-align: center;
+	}
+	
+	
+</style>

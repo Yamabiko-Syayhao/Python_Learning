@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        <a href="https://www.baidu.com">我是div中的a</a>
+    </div>
+    <h1>
+        <!-- javascript:; 如果在开发中暂时没有要跳转的页面  可以放这个 -->
+        <a href="javascript:;">我是h1中的a</a>
+    </h1>
+
+    <div class="main"></div>
+
+
+    <script>
+        // 获取dom元素  获取网页中的标签
+        // document.querySelector("选择器")
+
+        var boxA = document.querySelector(".box a")
+        console.log(boxA);
+        var h1A = document.querySelector("h1 a")
+        console.log(h1A);
+        
+        // 获取a标签里边的href属性
+        console.log(boxA.href);
+        // 需求 修改h1中的a标签的href  改成淘宝的网址
+        h1A.href = "https://www.taobao.com/"
+        
+        // 获取标签中的内容
+        console.log(boxA.innerHTML)
+        // 需求 将box中的a标签的内容  改为百度一下
+        boxA.innerHTML = "百度一下"
+
+
+        // 需求  在main那个div中添加上一个h3标签  里边内容是哈喽周三
+        var main = document.querySelector(".main")
+        // 以代码的形式编译
+        main.innerHTML = "<h3>哈喽 周二</h3>"
+        // 以文本的形式编译
+        // main.innerText = "<h3>哈喽 周二</h3>"
+        
+    </script>
+</body>
+</html>

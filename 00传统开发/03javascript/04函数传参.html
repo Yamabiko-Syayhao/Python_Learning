@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box"></div>
+
+    <script>
+        // 获取box
+        var box = document.querySelector('.box')
+
+        // 形参 定义函数的时候传递的参数  相当于定义变量接收实参
+        function fn(x,y){
+            // console.log(x,y);
+            // 模板字符串 ``  支持html代码换行
+            // 遇到变量输出  ${变量名}
+            box.innerHTML += `
+                <h1>${x}</h1>
+                <h1>${y}</h1>
+            `
+        }
+
+        // 实参 调用函数的时候传递的参数
+        fn("张三三","周二")
+        fn("李四","周三")
+    </script>
+</body>
+</html>

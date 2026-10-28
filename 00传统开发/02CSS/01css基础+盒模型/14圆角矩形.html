@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圆角矩形</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin-bottom: 20px;
+        }
+        .op1{
+            /* 变为正圆   前提是宽高相等*/
+            /* border-radius: 50%; */
+            /* 具体的像素  宽度的一半 */
+            border-radius: 100px;
+        }
+        .op2{
+            /* 变为圆角矩形 */
+            border-radius: 20px;
+        }
+        .op3{
+            /* 椭圆--基于长方形去画 意味着宽高不一致 */
+            height: 100px;
+            border-radius: 50%;
+        }
+        .op4{
+            width: 0;
+            height: 0;
+            border: 100px solid pink;
+            border-color: red green blue orange;
+            border-radius: 50%;
+        }
+        p{
+            width: 0;
+            height: 0;
+            border: 100px solid pink;
+            /* transparent 透明 */
+            border-color: transparent transparent red transparent;
+        }
+    </style>
+</head>
+<body>
+    <div class="op1"></div>
+    <div class="op2"></div>
+    <div class="op3"></div>
+    <div class="op4"></div>
+    <p></p>
+</body>
+</html>

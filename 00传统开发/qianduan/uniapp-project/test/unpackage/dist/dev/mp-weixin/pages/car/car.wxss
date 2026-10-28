@@ -1,0 +1,17 @@
+@import "../../uvue.wxss";
+:host{display:flex;flex-direction:column}
+
+div {
+			position: relative;
+}
+.car[class]{
+			align-items: center;
+			justify-content: center;
+			margin: auto;
+			display: flex;
+			position: absolute;
+			color: white;
+			background-color: firebrick;
+			width: 100px;
+			height: 30px;
+}

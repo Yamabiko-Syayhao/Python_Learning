@@ -1,0 +1,37 @@
+:root {
+  font-family: 'Microsoft YaHei', 'PingFang SC', Arial, sans-serif;
+  color: #303133;
+  background: #fff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-width: 320px;
+}
+#app {
+  min-height: 100vh;
+}
+button,
+input,
+select {
+  font: inherit;
+}
+a {
+  color: #409eff;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.el-overlay-dialog .el-dialog {
+  max-width: calc(100vw - 32px);
+}
+.el-message-box {
+  max-width: calc(100vw - 32px);
+}

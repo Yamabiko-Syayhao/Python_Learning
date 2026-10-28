@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- onclick 点击事件   当我点击按钮的时候触发fn这个函数-->
+    <button onclick="fn()">点击</button>
+    <script>
+        /*
+            fetch('接口api',{
+                method:'post',
+                headers:{
+                    'Content-Type':'application/json'
+                },
+                body:'请求的参数'
+            }).then(res=>res.json())
+            .then((res)=>{
+                console.log(res);
+            })
+
+
+            fetch('接口api',{
+                method:'get',
+                headers:{
+                    'Content-Type':'application/json'
+                }
+            }).then(res=>res.json())
+            .then((res)=>{
+                console.log(res);
+            })
+        */
+
+        // 定义了一个函数
+        // 调接口
+        function fn(){
+            // fetch就是前端向后端请求数据用的  接口api是后端提供
+            fetch("http://39.105.138.172:8088/v1/workflows/run",{
+                // 请求方法--后端指定的 post  get  delete  put
+                method:"post",
+                // 请求头--后端指定
+                headers:{
+                    // 以什么格式传给后端  以json对象的格式传给后端
+                    'Content-Type':'application/json',
+                    // 认证信息
+                    'Authorization': 'Bearer app-7VIWXAip1tFWlNNN3toBIczp'
+                },
+                // 传递的参数
+                body:JSON.stringify({
+                    "inputs":{
+                        "query":"你是谁？"
+                    },
+                    "user":'abc-123'
+                })
+                // 将后端返回的数据转为json对象 ---- 将数据的格式转为我们能用的
+            }).then(res=>res.json())
+            // 处理拿回来的数据----可以用后端返回给你的数据了
+            .then((res)=>{
+                console.log(res,"后端返回给你的数据");
+            })
+        }
+    </script>
+</body>
+</html>

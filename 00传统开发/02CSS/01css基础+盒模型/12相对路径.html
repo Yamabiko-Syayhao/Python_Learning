@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>相对路径</title>
+</head>
+<body>
+    <!-- 
+        绝对路径就是去找你电脑盘符里边的文件----这种不推荐
+        绝对路径不推荐使用原因你的电脑不一定有d盘，就算有也不一定这些文件或者文件夹存在
+    -->
+    <img src="D:\2608\01传统开发\02CSS\01css基础+盒模型\images\sun.jpg" alt="">
+
+    <!-- 
+        相对路径****
+        ./ 当前目录（从当前目录出发找到目标）  可以省略
+        ../ 上一级目录
+        ../../ 上上级目录
+    -->
+    <img src="./images/sun.jpg" alt="">
+    <img src="images/sun.jpg" alt="">
+    <img src="../../imgs/happy.gif" alt="">
+    <img src="../../../" alt="">
+</body>
+</html>

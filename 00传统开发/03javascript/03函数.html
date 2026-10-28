@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>点击</button>
+    <div class="box">
+        hello world
+    </div>
+
+    <script>
+        // 获取元素  button box
+        var btn = document.querySelector('button')
+        var box = document.querySelector('.box')
+
+
+        /*
+            1.定义函数
+                function 函数名(){
+                    函数体。。自己的逻辑
+                }
+        */ 
+
+        function fn(){
+            // 修改box里边的内容 会替换原来的内容
+            // box.innerHTML = "<h1>明天周三</h1>"
+            
+            // += 是在原来的基础上追加内容 原来的数据会保留
+            box.innerHTML += "<h1>明天周三</h1>"
+        }
+
+        // 2.使用函数  调用函数   函数名()
+        fn()
+        fn()
+        fn()
+        fn()
+
+    </script>
+</body>
+</html>

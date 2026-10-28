@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>百杉智能助手</title>
+    <!-- 工作中 用 css链入式    href引入的是外部的css文件-->
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <!-- 左侧界面 -->
+    <div class="sidebar">
+        <div class="logo">青岛百杉AI助手</div>
+        <div class="new_chat">+新建对话</div>
+        <div class="chat_list">
+            <div class="chat_item active">如何学好前端</div>
+            <div class="chat_item">HTML+CSS教程</div>
+            <div class="chat_item">AI学习路线</div>
+            <div class="chat_item">Python 入门</div>
+        </div>
+    </div>
+    <!-- 右侧界面 -->
+    <div class="main">
+        <div class="header">如何学好AI大模型应用开发?</div>
+        <div class="chat_box">
+            <!-- 我发的消息 -->
+            <div class="msg user">
+                <div class="avatar">我</div>
+                <div class="content">你好，我想知道如何学好AI大模型应用开发？</div>
+            </div>
+            <!-- 对方回复的消息 -->
+            <div class="msg bot">
+                <div class="avatar bot_avatar">杉</div>
+                <div class="content">
+                    学好AI应用大模型可以按这个路线:<br>
+                    1.先吃透基础:Python、向量库、数据库、Prompt工程<br>
+                    2.主攻核心:RAG检索增强、Agent调用、API对接大模型<br>
+                    3.动手实战:搭知识库问答、文档解析、智能对话小项目<br>
+                    4.多看文档:吃透OpenAl/百炼/DeepSeek接口，熟悉LangChain<br>
+                    5.练调优：优化提示词 拆分知识库 控制上下文 提升回答精准度<br>
+                    6.多度盘：拆解开源项目 积累可复用代码与场景方案 从小项目迭代进阶
+                </div>
+            </div>
+        </div>
+        <div class="input_area">
+            <div class="input_top">
+                <input type="text" placeholder="请输入问题">
+                <button onclick="fn()">发送</button>
+            </div>
+            <div class="input_bottom">百杉可以帮你创作 解答问题 聊天互动</div>
+        </div>
+    </div>
+    <script>
+        // 获取元素 发送按钮  输入框  聊天容器
+        var btn = document.querySelector('button')
+        var ipt = document.querySelector('input')
+        var chatBox = document.querySelector('.chat_box')
+
+        // 定义一个函数 自动滚动到底部
+        function bs(){
+            // 让这个滚动容器 垂直滚动到指定的某个位置
+            chatBox.scrollTo({
+                // scrollHeight 盒子中所有内容的高度
+                top:chatBox.scrollHeight,
+                // 滚动动画效果   smooth 平滑滚动
+                behavior:"smooth"
+            })
+        }
+
+        /**
+         * 打字机函数
+         * @param {HTMLElement} dom 要输出内容的dom节点
+         * @param {string} text 完整文本(支持<br>换行)
+         * @param {number} speed 打字速度 ms
+         * @param {Function} finishCb 打字完成回调
+         */
+        function typeWriter(dom, text, speed = 30, finishCb) {
+            let index = 0;
+            dom.innerHTML = "";
+            const timer = setInterval(()=>{
+                if(index >= text.length){
+                    clearInterval(timer);
+                    finishCb && finishCb();
+                    return;
+                }
+                dom.innerHTML += text.charAt(index);
+                bs();
+                index++;
+            }, speed)
+        }
+
+        function fn(){
+            // 1.获取输入框中的内容
+            var msg = ipt.value.trim()
+            console.log(msg,"输入框中的内容");
+            // 2. 判断输入框内容是否为空  如果为空提示用户输入内容
+            if(msg == ''){
+                alert('输入内容不能为空！！')
+                return;
+            }
+            // 3.修改按钮状态  按钮变为加载中的时候 是不能点击的是禁用的 颜色灰色
+            btn.innerHTML = "加载中..."
+            btn.disabled = true
+            btn.style.backgroundColor = "#ccc"
+            // 4.渲染用户消息
+            chatBox.innerHTML += `
+                <div class="msg user">
+                    <div class="avatar">我</div>
+                    <div class="content">${msg}</div>
+                </div> 
+            `
+            // 5.清空输入框
+            ipt.value = ""
+            // 调用滚动到底部那个函数
+            bs()
+            // fetch就是前端向后端请求数据用的  接口api是后端提供
+            fetch("http://39.105.138.172:8088/v1/workflows/run",{
+                // 请求方法--后端指定的 post  get  delete  put
+                method:"post",
+                // 请求头--后端指定
+                headers:{
+                    // 以什么格式传给后端  以json对象的格式传给后端
+                    'Content-Type':'application/json',
+                    // 认证信息
+                    'Authorization': 'Bearer app-7VIWXAip1tFWlNNN3toBIczp'
+                },
+                // 传递的参数
+                body:JSON.stringify({
+                    "inputs":{
+                        "query":msg
+                    },
+                    "user":'abc-123'
+                })
+                // 将后端返回的数据转为json对象 ---- 将数据的格式转为我们能用的
+            }).then(res=>res.json())
+            // 处理拿回来的数据----可以用后端返回给你的数据了
+            .then((res)=>{
+                // 创建bot消息外壳，content为空，后续打字填充
+                chatBox.innerHTML += `
+                    <div class="msg bot">
+                        <div class="avatar bot_avatar">杉</div>
+                        <div class="content"></div>
+                    </div>
+                `
+                bs()
+                // 获取刚新增的bot的content节点
+                const botDom = chatBox.lastElementChild.querySelector('.content')
+                const answerText = res.data.outputs.data
+
+                // 启动打字效果，打字结束恢复按钮
+                typeWriter(botDom, answerText,30,()=>{
+                    // 打字完成修改按钮状态
+                    btn.innerHTML = "发送"
+                    btn.disabled = false
+                    btn.style.backgroundColor = "#0066ff"
+                })
+            })
+        }
+        // 回车快捷发送
+        ipt.addEventListener("keydown",function(e){
+            // 按下了enter键
+            // if(e.key === "Enter" && btn.innerHTML == '发送'){
+            if(e.key === "Enter"){
+                fn()
+            }
+        })
+    </script>
+</body>
+</html>

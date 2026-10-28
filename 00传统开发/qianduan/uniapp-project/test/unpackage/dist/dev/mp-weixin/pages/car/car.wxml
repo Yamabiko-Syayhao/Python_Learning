@@ -1,0 +1,1 @@
+<view id="{{a}}" change:eS="{{uV.sS}}" eS="{{$eS[a]}}" change:eA="{{uV.sA}}" eA="{{$eA[a]}}" class="{{[b]}}" style="{{virtualHostStyle}}" hidden="{{virtualHostHidden || false}}"><view class="car"> carcarcar </view></view><wxs src="/common/uniView.wxs" module="uV"/>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        后代选择器  
+            a选择器 b选择器 意思是a中的后代b
+        */
+        .box h1{
+            background-color: pink;
+        }
+        .box1 h1{
+            background-color: orange;
+        }
+        /* 子代选择器 选儿子  a选择器>b选择器  意思是选a中的儿子b*/
+        .box1>h1{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>我是box中的h1</h1>
+    </div>
+
+    <div class="box1">
+        <h1>我是box1中的h1</h1>
+        <div>
+            <h1>我是内层的h1</h1>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 1000px;
+            height: 400px;
+            background-color: pink;
+            margin: auto;
+            /* flex布局 */
+            display: flex;
+            /* 
+                横轴对齐方式 justify-content
+                    flex-start 横轴左对齐（默认值）
+                    flex-end 右对齐
+                    center:居中对齐
+                    space-between 两端对齐 其余的平分剩余空间
+                    space-around 每个儿子之间的左右间隔都相等
+            */
+            justify-content: space-around;
+        }
+        .item{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+</body>
+</html>

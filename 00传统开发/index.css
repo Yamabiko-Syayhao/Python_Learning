@@ -1,0 +1,139 @@
+/* 这个文件就是单独写css样式的文件 */
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    /* 100vh高度和浏览器高度一致 */
+    height: 100vh;
+    /* 超出隐藏  隐藏滚动条 */
+    overflow: hidden;
+}
+.sidebar{
+    width: 260px;
+    border-right: 1px solid #e5e5e5;
+}
+.logo{
+    text-align: center;
+    font-size: 20px;
+    color: #0066ff;
+    font-weight: 900;
+    padding: 15px 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+.new_chat{
+    background-color: #0066ff;
+    color: #fff;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    margin: 15px;
+}
+.chat_list{
+    padding: 10px;
+}
+.chat_item{
+    font-size: 14px;
+    padding: 12px 15px;
+    margin-bottom: 4px;
+    /* 鼠标变小手 */
+    cursor: pointer;
+}
+.active{
+    background-color: #E8F3FF;
+    color: #0066ff;
+}
+.main{
+    /* 右侧占满剩余空间 */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.header{
+    height: 58px;
+    line-height: 58px;
+    padding-left: 20px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.input_area{
+    padding: 20px 8%;
+    border-top: 1px solid #f0f0f0;
+}
+.input_top{
+    border: 1px solid #dfdfdf;
+    border-radius: 10px;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+}
+.input_bottom{
+    font-size: 12px;
+    color: #999;
+    text-align: center;
+    margin-top: 10px;
+}
+input{
+    flex: 1;
+    border: none;
+    /* 去掉获取焦点的时候的边框 */
+    outline: none;
+}
+button{
+    background-color: #0066ff;
+    color: #fff;
+    padding: 6px 16px;
+    font-size: 14px;
+    border-radius: 16px;
+    /* 去掉本身自带的边框 */
+    border: none;
+    cursor: pointer;
+}
+
+.chat_box{
+    flex: 1;
+    background-color: #f2f2f2;
+    padding: 30px 60px;
+    /* 超出部分显示纵轴滚动条 */
+    overflow-y: auto;
+}
+.msg{
+    display: flex;
+    margin-bottom: 20px;
+}
+.user{
+    /* 我 发的消息 在右边 */
+    flex-direction: row-reverse;
+}
+.avatar{
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: #cfcfcf;
+    text-align: center;
+    line-height: 38px;
+    font-weight: 900;
+}
+.content{
+    background-color: #0066ff;
+    color: #fff;
+    padding: 12px 16px;
+    border-radius: 14px;
+    font-size: 14px;
+    margin-right: 10px;
+    border-top-right-radius: 4px;
+    /* 允许的最大宽度 */
+    max-width: 75%;
+}
+.bot_avatar{
+    background-color: #0066ff;
+    color: #fff;
+}
+.bot .content{
+    background-color: pink;
+    color: #000;
+    margin-left: 10px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 14px;
+}

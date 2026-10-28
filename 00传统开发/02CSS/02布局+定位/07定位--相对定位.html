@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* 200*200  1红色  2橙色  3黄色 */
+        div{
+            width: 200px;
+            height: 200px;
+        }
+        /* 
+            相对定位---position:relative;
+                元素原来的位置保留
+                只要是设置了定位，那么该元素会多四个属性
+                    top 距离上边的间距
+                    bottom 距离下边的间距
+                    left  距离左边的间距
+                    right  距离右边的间距
+        */
+        .box1{
+            background-color: red;
+        }
+        .box2{
+            background-color: orange;
+            position: relative;
+            left: 200px;
+            right: 200px;
+        }
+        .box3{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+</body>
+</html>

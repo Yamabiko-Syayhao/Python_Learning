@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+        .box{
+            width: 1000px;
+            height: 400px;
+            background-color: pink;
+            margin: auto;
+            /* flex布局 */
+            display: flex;
+            /* 
+                纵轴对齐方式 align-items
+                    flex-start 纵轴上对齐（默认值）
+                    flex-end 纵轴下对齐
+                    center 居中对齐
+            */
+            align-items: flex-end;
+        }
+        .item{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+</body>
+</html>

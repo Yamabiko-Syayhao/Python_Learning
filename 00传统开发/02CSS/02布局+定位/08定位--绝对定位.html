@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 200px;
+            height: 200px;
+        }
+        /* 
+            绝对定位 position:absolute;
+                元素不会占用原来的位置
+            只要是设置了定位，那么该元素会多四个属性
+                top 距离上边的间距
+                bottom 距离下边的间距
+                left  距离左边的间距
+                right  距离右边的间距
+                
+        */
+        .box1{
+            background-color: red;
+        }
+        .box2{
+            background-color: orange;
+            position: absolute;
+            left: 200px;
+        }
+        .box3{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+</body>
+</html>

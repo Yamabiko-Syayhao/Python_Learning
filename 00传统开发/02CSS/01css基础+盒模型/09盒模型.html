@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            /* 内容的宽度 */
+            width: 200px;
+            /* 内容的高度 */
+            height: 200px;
+            background-color: yellow;
+            /* 边框 */
+            border: 20px solid red;
+            /* 内边距 */
+            padding: 20px;
+            /* 外边距 */
+            margin: 20px;
+        }
+        .op1{
+            color: #0000FF;
+        }
+        .op2{
+            /* rgb   颜色三原色 每一个值取值范围0-255 */
+            color: rgb(0,0,225);
+            /* 多出来的这个参数 是透明度 取值范围0-1  1完全不透明 */
+            /* color: rgba(0,0,255,0.5); */
+        }
+        .op3{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <!-- 盒模型的组成：内容 内边距  边框  外边距 -->
+    <div class="box">
+        hello
+    </div>
+    <p class="op1">我是老大</p>
+    <p class="op2">我是老二</p>
+    <p class="op3">我是老三</p>
+</body>
+</html>

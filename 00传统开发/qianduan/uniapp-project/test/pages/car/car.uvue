@@ -1,0 +1,35 @@
+<template>
+	<view class="car">
+		<text>购物车</text>
+	</view>
+</template>
+
+<script setup>
+
+	import { onShow } from '@dcloudio/uni-app';
+	onShow(()=>{
+		// 展示条件编译  平台差异代码用条件编译包裹起来
+		
+		// #ifdef APP
+		console.log("进入购物车页面");
+		// #endif
+		
+		console.log("6666")
+	})
+	
+</script>
+
+<style>
+		.car{
+			align-items: center;
+			justify-content: center;
+			margin: auto;
+			display: flex;
+			position: absolute;
+			color: white;
+			background-color: firebrick;
+			width: 100px;
+			height: 30px;
+		}
+		
+</style>
