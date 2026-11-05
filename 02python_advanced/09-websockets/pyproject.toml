@@ -1,0 +1,7 @@
+[project]
+name = "09-websockets"
+version = "0.1.0"
+requires-python = ">=3.14"
+dependencies = [
+    "websockets>=17.3",
+]

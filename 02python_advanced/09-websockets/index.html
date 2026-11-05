@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>MewType临时聊天室</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft Yahei", sans-serif;
+        }
+
+        body {
+            background: #f4f6f9;
+            padding: 30px;
+        }
+
+        .chat-wrap {
+            width: 620px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .chat-header {
+            background: #409eff;
+            color: #fff;
+            padding: 14px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .online-text {
+            font-size: 14px;
+            font-weight: normal;
+            opacity: 0.9;
+        }
+
+        .chat-input-area {
+            padding: 16px 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .item {
+            margin: 10px 0;
+        }
+
+        input {
+            padding: 8px 12px;
+            border: 1px solid #dcdfe6;
+            border-radius: 6px;
+            font-size: 15px;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #409eff;
+        }
+
+        #usernameInput {
+            width: 220px;
+        }
+
+        #msgInput {
+            width: 420px;
+        }
+
+        button {
+            padding: 8px 18px;
+            background: #409eff;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 15px;
+            margin-left: 8px;
+        }
+
+        button:hover {
+            background: #66b1ff;
+        }
+
+        #msgBox {
+            height: 450px;
+            padding: 16px;
+            overflow-y: auto;
+            background: #fafafa;
+        }
+
+        .msg-item {
+            display: flex;
+            margin-bottom: 16px;
+            align-items: flex-start;
+        }
+
+        .msg-left {
+            justify-content: flex-start;
+        }
+
+        .msg-right {
+            justify-content: flex-end;
+        }
+
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #909399;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+
+        .msg-left .avatar {
+            margin-right: 10px;
+        }
+
+        .msg-right .avatar {
+            margin-left: 10px;
+        }
+
+        .bubble-wrap {
+            max-width: 320px;
+        }
+
+        .username-text {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 4px;
+        }
+
+        .msg-left .bubble {
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            padding: 10px 14px;
+            border-radius: 0 10px 10px 10px;
+        }
+
+        .msg-right .bubble {
+            background: #95ec69;
+            padding: 10px 14px;
+            border-radius: 10px 0 10px 10px;
+        }
+
+        .msg-system {
+            text-align: center;
+            margin: 12px 0;
+            color: #999;
+            font-size: 13px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="chat-wrap">
+    <div class="chat-header">
+        <span>MewType临时聊天室</span>
+        <span class="online-text">在线：<span id="onlineCount">0</span>人</span>
+    </div>
+    <div class="chat-input-area">
+        <div class="item">
+            用户名：<input id="usernameInput" placeholder="请输入你的昵称">
+        </div>
+        <div class="item">
+            消息：<input id="msgInput" placeholder="输入聊天内容">
+            <button onclick="send()">发送</button>
+        </div>
+    </div>
+    <div id="msgBox"></div>
+</div>
+
+<script>
+    // 连接后端websocket服务，端口9000
+    // 本机直接打开文件时连接本机；通过 HTTP 访问时连接网页所在电脑。
+    const wsHost = location.hostname || "127.0.0.1";
+    let ws = new WebSocket(`ws://${wsHost}:9000/ws`);
+    const msgBox = document.getElementById("msgBox");
+    const onlineCountDom = document.getElementById("onlineCount");
+    const STORAGE_KEY = "chat_local_history";
+    const MAX_LOCAL_MSG = 80; //本地最多保存80条消息
+
+    // 页面加载：先恢复用户名，再渲染聊天记录！顺序不能颠倒
+    window.onload = function () {
+        // 1.优先回填用户名
+        const saveName = localStorage.getItem("chat_username") || "";
+        document.getElementById("usernameInput").value = saveName;
+        // 2.用户名回填完毕，再加载本地历史消息，appendMsg才可以正确区分左右气泡
+        loadLocalHistory(saveName);
+    }
+
+    //读取本地历史，传入当前登录用户名
+    function loadLocalHistory(myName) {
+        const str = localStorage.getItem(STORAGE_KEY);
+        if (!str) return;
+        try {
+            const list = JSON.parse(str);
+            list.forEach(item => {
+                appendMsg(item.username, item.content, myName);
+            })
+        } catch (e) {
+            localStorage.removeItem(STORAGE_KEY);
+        }
+    }
+
+    //保存消息到本地存储
+    function saveMsgToLocal(username, content) {
+        let arr = [];
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (raw) {
+            arr = JSON.parse(raw);
+        }
+        arr.push({username, content});
+        //限制最大条数，防止localStorage占满
+        if (arr.length > MAX_LOCAL_MSG) {
+            arr = arr.slice(-MAX_LOCAL_MSG);
+        }
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(arr));
+    }
+
+    // 连接建立成功
+    ws.onopen = () => {
+        appendSystem("连接成功，可以开始聊天");
+        // 连上后立刻向服务器要历史记录
+        ws.send(JSON.stringify({ type: "req_history" }));
+    }
+
+    ws.onerror = () => {
+        appendSystem("WebSocket连接错误，请确认后端服务启动");
+    }
+
+    // 接收后端推送消息
+    ws.onmessage = (event) => {
+        try {
+            const res = JSON.parse(event.data);
+            const myName = document.getElementById("usernameInput").value.trim();
+            // 后端下发历史消息，优先用后端历史，清空本地旧脏数据
+            if (res.type === "history") {
+                // 收到后端历史，清空页面原有dom和本地缓存，以服务器为准
+                msgBox.innerHTML = "";
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(res.data));
+                res.data.forEach(item => appendMsg(item.username, item.content, myName));
+            }
+            // 更新在线人数
+            else if (res.type === "online_count") {
+                onlineCountDom.innerText = res.count;
+            }
+            // 普通聊天消息
+            else if (res.type === "chat") {
+                appendMsg(res.username, res.content, myName);
+                saveMsgToLocal(res.username, res.content);
+            }
+        } catch (e) {
+            appendSystem(event.data);
+        }
+    };
+
+    // 连接关闭
+    ws.onclose = () => {
+        appendSystem("连接断开");
+        onlineCountDom.innerText = "0";
+    };
+
+    // 渲染聊天消息，增加第三个可选参数myName，不再读取DOM
+    function appendMsg(name, text, myName) {
+        const avatarText = name.charAt(0);
+        let html;
+        if (name === myName) {
+            html = `
+        <div class="msg-item msg-right">
+            <div class="bubble-wrap">
+                <div class="username-text" style="text-align:right">${name}</div>
+                <div class="bubble">${escapeHtml(text)}</div>
+            </div>
+            <div class="avatar">${avatarText}</div>
+        </div>`;
+        } else {
+            html = `
+        <div class="msg-item msg-left">
+            <div class="avatar">${avatarText}</div>
+            <div class="bubble-wrap">
+                <div class="username-text">${name}</div>
+                <div class="bubble">${escapeHtml(text)}</div>
+            </div>
+        </div>`;
+        }
+        msgBox.innerHTML += html;
+        // DOM渲染完成后滚动到底部，解决接收消息不自动到底
+        setTimeout(()=>{
+            msgBox.scrollTop = msgBox.scrollHeight;
+        },0);
+    }
+
+    // 渲染系统提示消息
+    function appendSystem(text) {
+        msgBox.innerHTML += `<div class="msg-system">${escapeHtml(text)}</div>`;
+        setTimeout(()=>{
+            msgBox.scrollTop = msgBox.scrollHeight;
+        },0);
+    }
+
+    // HTML特殊字符转义，防御XSS攻击
+    function escapeHtml(str) {
+        return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+    }
+
+    // 发送消息
+    function send() {
+        const username = document.getElementById("usernameInput").value.trim();
+        const content = document.getElementById("msgInput").value.trim();
+        if (!username) {
+            alert("请填写用户名！");
+            return;
+        }
+        //保存用户名本地，刷新不用重复输入昵称
+        localStorage.setItem("chat_username", username);
+        if (!content) {
+            alert("请输入消息内容！");
+            return;
+        }
+        if (ws.readyState !== WebSocket.OPEN) {
+            appendSystem("尚未连接到服务器，请先启动后端并刷新页面");
+            return;
+        }
+        ws.send(JSON.stringify({username, content}));
+        document.getElementById("msgInput").value = "";
+    }
+
+    // 输入框回车发送
+    document.getElementById("msgInput").addEventListener("keydown", e => {
+        if (e.key === "Enter") send();
+    })
+</script>
+</body>
+
+</html>

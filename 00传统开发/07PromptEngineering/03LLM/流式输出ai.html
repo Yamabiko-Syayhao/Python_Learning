@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>AI 聊天</title>
+</head>
+
+<body>
+    <form id="chat-form">
+        <input id="question" placeholder="输入问题，q 退出" autofocus>
+        <button id="send">发送</button>
+    </form>
+    <div id="chat" style="white-space: pre-wrap"></div>
+
+    <script>
+        const form = document.getElementById("chat-form")
+        const input = document.getElementById("question")
+        const send = document.getElementById("send")
+        const chat = document.getElementById("chat")
+        const messages = []
+
+        async function chatLoop() {
+            while (true) {
+                // 像第 10 个示例的 input() 一样，等用户输入下一轮
+                const question = await new Promise(resolve => {
+                    form.onsubmit = event => {
+                        event.preventDefault()
+                        const text = input.value.trim()
+                        if (text && !send.disabled) resolve(text)
+                    }
+                })
+
+                input.value = ""
+                send.disabled = true
+
+                if (question.toLowerCase() === "q") {
+                    input.disabled = true
+                    chat.append("已退出对话")
+                    break
+                }
+
+                const userMessage = { role: "user", content: question }
+                const turn = document.createElement("p")
+                turn.append(`我：${question}\nAI：`)
+                chat.append(turn)
+
+                try {
+                    const res = await fetch("http://127.0.0.1:5000/api/user1", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({ messages: [...messages, userMessage] })
+                    })
+                    if (!res.ok) throw new Error(`HTTP ${res.status}`)
+
+                    const reader = res.body.pipeThrough(new TextDecoderStream()).getReader()
+                    let reply = ""
+
+                    while (true) {
+                        const { value, done } = await reader.read()
+                        if (done) break
+                        turn.append(value)
+                        reply += value
+                    }
+
+                    messages.push(userMessage, { role: "assistant", content: reply })
+                } catch (error) {
+                    turn.append(`\n请求失败：${error.message}`)
+                } finally {
+                    send.disabled = false
+                    input.focus()
+                }
+            }
+        }
+
+        chatLoop()
+    </script>
+</body>
