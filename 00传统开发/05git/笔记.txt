@@ -84,6 +84,7 @@ git remote set-url origin https://gitee.com/你的用户名/仓库名.git
 
 
 git 常用的命令
+    初始化 git init 这会在当前文件夹创建一个隐藏的 .git 目录，让 Git 开始管理这个项目
     克隆仓库 git clone
     把要提交的文件加入暂存区：
     添加全部文件 git add .
@@ -117,3 +118,13 @@ git fetch origin 用于获取远端的分支
 
 取消某个文件的git跟踪 git rm --cached 文件名
 git log -1 --format="%an <%ae>" 查看上一次提交的人是谁
+
+
+首次推送到空的仓库
+git init
+git remote add origin https://github.com/用户名/仓库名.git
+git add .
+git status
+git commit -m "Initial commit"
+git branch -M main
+git push -u origin main
