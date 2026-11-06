@@ -6,6 +6,7 @@
 </head>
 <body>
     <button onclick="handleClick(1)">查询1</button>
+    <button onclick="handleClick(2)">查询2</button>
 
     <script>
         function handleClick(item){
@@ -18,8 +19,19 @@
                     .then((data)=>{
                         console.log(data,"后端传递给我的数据")
                     })
+
+            }
+            if (item == 2){
+                fetch("http://127.0.0.1:5000/api/ai?content=yunos的收货地址在哪",{
+                    method:"get"
+                }).then(res=>res.json())
+                    .then((data)=>{
+                        console.log(data,"后端传递给我的数据")
+                    })
             }
         }
+
+
     </script>
 </body>
 </html>
