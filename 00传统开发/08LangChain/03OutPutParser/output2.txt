@@ -1,0 +1,36 @@
+{
+    "teach_name": "LangChain",
+    "diff": "中等",
+    "goal": "在一周内掌握 LangChain 的核心概念、基本用法，并能够完成一个简单的大模型应用原型",
+    "days": 7,
+    "daily_plan": [
+        {
+            "day": 1,
+            "task": "学习 LangChain 基础概念，了解模型、提示词、链、内存、工具等核心模块，安装 Python 环境并创建第一个 Hello World 应用"
+        },
+        {
+            "day": 2,
+            "task": "学习模型接入与调用，尝试接入 OpenAI 或兼容大模型接口，掌握 PromptTemplate、LLMChain 等基础对象的使用"
+        },
+        {
+            "day": 3,
+            "task": "学习内存机制，实现对话历史管理，使用 ConversationBufferMemory 或其他 Memory 类型完成多轮对话案例"
+        },
+        {
+            "day": 4,
+            "task": "学习 Chain 的组合方式，练习顺序执行、输入输出映射，完成一个由多个步骤组成的文本处理链"
+        },
+        {
+            "day": 5,
+            "task": "学习工具调用，掌握 Tool、Agent 等概念，构建一个能调用外部工具或函数的大模型应用"
+        },
+        {
+            "day": 6,
+            "task": "学习数据与检索相关能力，了解 DocumentLoader、TextSplitter、VectorStore、Retriever，完成简单文档问答 Demo"
+        },
+        {
+            "day": 7,
+            "task": "综合实践，整合前面所学内容完成一个可运行的小型项目，例如智能客服、文档问答助手或个人知识库查询工具，并复盘学习过程"
+        }
+    ]
+}

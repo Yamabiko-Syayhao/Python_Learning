@@ -1,0 +1,36 @@
+{
+    "teach_name": "LangChain",
+    "diff": "中等（需要 Python 基础和大模型 API 使用经验）",
+    "goal": "7天内掌握 LangChain 的核心概念与常用组件，能够完成 Prompt 编排、Chain 构建、RAG 问答系统和简单 Agent 应用",
+    "days": 7,
+    "daily_plan": [
+        {
+            "day": 1,
+            "task": "了解 LangChain 定位，安装环境并配置 API Key，完成第一个 LLM 调用示例，理解模型、Prompt 和基础输出结果"
+        },
+        {
+            "day": 2,
+            "task": "学习 PromptTemplate、ChatPromptTemplate、输出解析器，掌握如何设计提示词并解析模型输出"
+        },
+        {
+            "day": 3,
+            "task": "学习 Chain、Runnable、LCEL 表达式，掌握如何把模型、Prompt 和解析器组合成可复用调用链"
+        },
+        {
+            "day": 4,
+            "task": "学习文档加载器、文本切分器和基础索引方式，理解非结构化数据进入 LangChain 的流程"
+        },
+        {
+            "day": 5,
+            "task": "学习向量存储、Embedding、Retriever，搭建一个本地 PDF 问答系统，完成基础 RAG 功能"
+        },
+        {
+            "day": 6,
+            "task": "学习 Tool、Agent、Memory，掌握如何让 LangChain 调用外部工具并维护对话上下文"
+        },
+        {
+            "day": 7,
+            "task": "完成综合项目：构建一个可运行的 RAG Agent 小应用，并进行错误处理、日志记录、性能优化和学习路径复盘"
+        }
+    ]
+}
