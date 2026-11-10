@@ -1,0 +1,36 @@
+{
+  "teach_name": "LangChain",
+  "diff": "中等",
+  "goal": "在一周内掌握LangChain的核心概念、链式调用、RAG检索增强生成、Agent工具调用，并能够完成一个LangChain应用小项目。",
+  "days": 7,
+  "daily_plan": [
+    {
+      "day": 1,
+      "task": "搭建Python开发环境，安装LangChain相关依赖，配置API Key，学习LangChain核心概念：Model、Prompt、Chain、Agent。"
+    },
+    {
+      "day": 2,
+      "task": "练习使用LangChain调用大模型，学习PromptTemplate、输出解析器OutputParser，完成一个基础文本生成链。"
+    },
+    {
+      "day": 3,
+      "task": "学习Runnable接口与LCEL表达式语法，掌握使用管道操作符组合Prompt、Model和Parser，构建可复用链。"
+    },
+    {
+      "day": 4,
+      "task": "学习RAG基础：文档加载器、文本分割器、Embedding模型和向量数据库，完成本地文档检索功能。"
+    },
+    {
+      "day": 5,
+      "task": "学习LangChain中的检索链，构建一个基于本地知识库的问答系统，能够根据上传文档回答问题。"
+    },
+    {
+      "day": 6,
+      "task": "学习Agent、Tool、Function Calling概念，创建自定义工具，完成一个可调用天气查询、计算器或网页搜索的Agent。"
+    },
+    {
+      "day": 7,
+      "task": "整合LangChain核心功能完成综合小项目，例如智能客服机器人、个人知识库问答系统或文档总结助手，并总结学习路径。"
+    }
+  ]
+}
