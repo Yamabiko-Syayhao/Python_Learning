@@ -28,8 +28,17 @@ def chat_prompt(user_prompt):
 
     ).invoke(user_prompt)
 
-
-
+def chat_utils():
+    return init_chat_model(
+        # 指定模型名称
+        model="qwen3.8-flash",
+        # 密钥
+        api_key=DASHSCOPE_API_KEY,
+        # 请求地址
+        base_url=DASHSCOPE_BASE_URL,
+        # 指定厂商  使用openai规范处理请求
+        model_provider="openai",
+    )
 
 
 
