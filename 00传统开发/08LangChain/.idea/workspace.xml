@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2acb38ad-8823-4e8e-a626-259e87840cd2" name="更改" comment="">
+    <list default="true" id="2acb38ad-8823-4e8e-a626-259e87840cd2" name="更改" comment="修改llm配置">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/llm.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/llm.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,9 +64,11 @@
     "Python.05统一模型.executor": "Run",
     "Python.05自动修复解析器.executor": "Run",
     "Python.06保留上下文.executor": "Run",
+    "Python.06报错重试解析器.executor": "Run",
     "Python.06部分填充提示词.executor": "Run",
     "Python.07提示词的输入输出方式.executor": "Run",
     "Python.07组合拼接提示词模板.executor": "Run",
+    "Python.07自定义jiexq.executor": "Run",
     "Python.config.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -244,8 +245,17 @@
       <workItem from="1794309604564" duration="419000" />
       <workItem from="1794311394701" duration="15000" />
       <workItem from="1794357334273" duration="2580000" />
-      <workItem from="1794367459424" duration="1981000" />
+      <workItem from="1794367459424" duration="18717000" />
     </task>
+    <task id="LOCAL-00001" summary="修改llm配置">
+      <option name="closed" value="true" />
+      <created>1794373082257</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1794373082257</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,10 +284,14 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="修改llm配置" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改llm配置" />
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/08LangChain$07.coverage" NAME="07组合拼接提示词模板 覆盖结果" MODIFIED="1794281450468" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/02PromptTemplate" />
     <SUITE FILE_PATH="coverage/08LangChain$01.coverage" NAME="01字符串输出解析器 覆盖结果" MODIFIED="1794289456530" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/03OutPutParser" />
-    <SUITE FILE_PATH="coverage/08LangChain$06.coverage" NAME="06部分填充提示词 覆盖结果" MODIFIED="1794280882794" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/02PromptTemplate" />
+    <SUITE FILE_PATH="coverage/08LangChain$06.coverage" NAME="06报错重试解析器 覆盖结果" MODIFIED="1794383021562" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/03OutPutParser" />
     <SUITE FILE_PATH="coverage/08LangChain$03chatdeepseek.coverage" NAME="03chatdeepseek 覆盖结果" MODIFIED="1794193360790" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/01chat-model" />
     <SUITE FILE_PATH="coverage/08LangChain$02.coverage" NAME="02对话提示词模板 覆盖结果" MODIFIED="1794213530683" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/02PromptTemplate" />
     <SUITE FILE_PATH="coverage/08LangChain$config.coverage" NAME="config 覆盖结果" MODIFIED="1794202783259" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -285,6 +299,7 @@
     <SUITE FILE_PATH="coverage/08LangChain$05.coverage" NAME="05自动修复解析器 覆盖结果" MODIFIED="1794368788482" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/03OutPutParser" />
     <SUITE FILE_PATH="coverage/08LangChain$03.coverage" NAME="03消息占位符 覆盖结果" MODIFIED="1794273433120" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/02PromptTemplate" />
     <SUITE FILE_PATH="coverage/08LangChain$02JSON.coverage" NAME="02JSON输出解析器 覆盖结果" MODIFIED="1794292529885" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/03OutPutParser" />
+    <SUITE FILE_PATH="coverage/08LangChain$07jiexq.coverage" NAME="07自定义jiexq 覆盖结果" MODIFIED="1794386917850" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/03OutPutParser" />
     <SUITE FILE_PATH="coverage/08LangChain$01openai.coverage" NAME="01调用openai 覆盖结果" MODIFIED="1794192388246" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/01chat-model" />
     <SUITE FILE_PATH="coverage/08LangChain$03Pydantic.coverage" NAME="03Pydantic模型解析器 覆盖结果" MODIFIED="1794368269175" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/03OutPutParser" />
     <SUITE FILE_PATH="coverage/08LangChain$04.coverage" NAME="04手动修复 覆盖结果" MODIFIED="1794300528262" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/03OutPutParser" />
