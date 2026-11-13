@@ -16,13 +16,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2acb38ad-8823-4e8e-a626-259e87840cd2" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/08langchain.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/08langchain.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04LCEL/04.Runnable并行.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04LCEL/05.透传组件.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02PromptTemplate/03消息占位符.py" beforeDir="false" afterPath="$PROJECT_DIR$/02PromptTemplate/03消息占位符.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseLocalColorSettings">
+    <colors>
+      <entry key="ead54f20-ea34-497b-b954-8f2e50aa8147" value="" />
+    </colors>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -33,6 +41,18 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_PUSH_TARGETS">
+      <map>
+        <entry key="$PROJECT_DIR$/../..">
+          <value>
+            <list>
+              <push-target source-branch="main" target-branch="main" target-remote="gitee" />
+              <push-target source-branch="main" target-branch="master" target-remote="gitee" />
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -47,6 +67,8 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/04LCEL/04.Runnable并行.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/04LCEL/05.透传组件.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/practice/langchain练习2.md" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/practice/langchain练习4.md" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
   </component>
@@ -55,61 +77,61 @@
 }</component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.000000001237438" />
-      <entry key="MS500" value="1.0177783410195527" />
-      <entry key="S2" value="1.5462488324327992" />
-      <entry key="S5" value="2.1814944841756896" />
-      <entry key="S10" value="2.6781099895550793" />
-      <entry key="S30" value="4.602497399466708" />
-      <entry key="S60" value="6.879740327502183" />
-      <entry key="M2" value="9.912598980135089" />
-      <entry key="M5" value="15.807546724189118" />
-      <entry key="M10" value="28.220968462811054" />
-      <entry key="M15" value="42.758974360461224" />
-      <entry key="M30" value="82.60339778981299" />
-      <entry key="H1" value="140.8210908977564" />
-      <entry key="H2" value="218.2243208913655" />
-      <entry key="H4" value="303.3854861885156" />
-      <entry key="D1" value="438.5407616075686" />
-      <entry key="W1" value="472.0242372107254" />
+      <entry key="MS100" value="1.0000092107218566" />
+      <entry key="MS500" value="1.1292145842061974" />
+      <entry key="S2" value="2.648067643389564" />
+      <entry key="S5" value="4.6664964511325655" />
+      <entry key="S10" value="6.076821523967692" />
+      <entry key="S30" value="8.516563771005782" />
+      <entry key="S60" value="10.53502354527558" />
+      <entry key="M2" value="12.537686297631339" />
+      <entry key="M5" value="14.661864636585136" />
+      <entry key="M10" value="15.696294751071195" />
+      <entry key="M15" value="16.096430922460627" />
+      <entry key="M30" value="16.534811952978387" />
+      <entry key="H1" value="17.456698034516734" />
+      <entry key="H2" value="31.463770831363902" />
+      <entry key="H4" value="96.07771007160493" />
+      <entry key="D1" value="379.2572521888881" />
+      <entry key="W1" value="492.72397699231436" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="5.500917819366916E-88" />
-      <entry key="MS500" value="3.532539537847634E-18" />
-      <entry key="S2" value="4.3353259751769115E-5" />
-      <entry key="S5" value="0.017980787278240398" />
-      <entry key="S10" value="0.13409314363855182" />
-      <entry key="S30" value="0.5310944055716245" />
-      <entry key="S60" value="1.0207923384462727" />
-      <entry key="M2" value="2.155109545043679" />
-      <entry key="M5" value="4.2650601953082505" />
-      <entry key="M10" value="6.159330897412619" />
-      <entry key="M15" value="7.580682492391517" />
-      <entry key="M30" value="11.107003349715441" />
-      <entry key="H1" value="17.132095065668715" />
-      <entry key="H2" value="25.828428991521662" />
-      <entry key="H4" value="34.789354777041964" />
-      <entry key="D1" value="47.536422515386796" />
-      <entry key="W1" value="50.481630348434976" />
+      <entry key="MS100" value="2.1649164406676545E-246" />
+      <entry key="MS500" value="7.363566744888197E-50" />
+      <entry key="S2" value="5.214691055451196E-13" />
+      <entry key="S5" value="1.299631660759415E-5" />
+      <entry key="S10" value="0.004401310577567583" />
+      <entry key="S30" value="0.2751557706419736" />
+      <entry key="S60" value="0.8648471836052473" />
+      <entry key="M2" value="1.5875021087686474" />
+      <entry key="M5" value="2.3170251890484352" />
+      <entry key="M10" value="2.634792864777986" />
+      <entry key="M15" value="2.7509037394581495" />
+      <entry key="M30" value="2.8727079858356" />
+      <entry key="H1" value="3.003804628383158" />
+      <entry key="H2" value="4.645261928870653" />
+      <entry key="H4" value="12.098228286491224" />
+      <entry key="D1" value="42.86798982985941" />
+      <entry key="W1" value="54.700399229347" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.1675699314699426E-7" />
-      <entry key="MS500" value="0.045580307724842097" />
-      <entry key="S2" value="0.8537150673883673" />
-      <entry key="S5" value="1.7904436132865695" />
-      <entry key="S10" value="2.535626006782298" />
-      <entry key="S30" value="4.949348476670701" />
-      <entry key="S60" value="7.762056484075028" />
-      <entry key="M2" value="11.960556315186484" />
-      <entry key="M5" value="20.00175356682717" />
-      <entry key="M10" value="34.32984254890599" />
-      <entry key="M15" value="50.29705761657738" />
-      <entry key="M30" value="93.67639658739584" />
-      <entry key="H1" value="157.92564752797946" />
-      <entry key="H2" value="244.03215410155343" />
-      <entry key="H4" value="338.16121769179466" />
-      <entry key="D1" value="486.0741407511418" />
-      <entry key="W1" value="522.5054073770249" />
+      <entry key="MS100" value="0.6597587914722768" />
+      <entry key="MS500" value="1.0352166038971684" />
+      <entry key="S2" value="2.58785556385005" />
+      <entry key="S5" value="4.624024678885888" />
+      <entry key="S10" value="6.052960952223364" />
+      <entry key="S30" value="8.764841628917246" />
+      <entry key="S60" value="11.368421371285464" />
+      <entry key="M2" value="14.098043067404388" />
+      <entry key="M5" value="16.963295574519137" />
+      <entry key="M10" value="18.322243815217504" />
+      <entry key="M15" value="18.84118248932866" />
+      <entry key="M30" value="19.40430605385476" />
+      <entry key="H1" value="20.45870346931611" />
+      <entry key="H2" value="36.106765013391325" />
+      <entry key="H4" value="108.17189752113333" />
+      <entry key="D1" value="422.1226334075923" />
+      <entry key="W1" value="547.4238983726543" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -121,62 +143,73 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Node.js.test.ts.executor&quot;: &quot;Run&quot;,
-    &quot;Python.01LCEL表达式介绍.executor&quot;: &quot;Run&quot;,
-    &quot;Python.01字符串提示词模板.executor&quot;: &quot;Run&quot;,
-    &quot;Python.01字符串输出解析器.executor&quot;: &quot;Run&quot;,
-    &quot;Python.01调用openai.executor&quot;: &quot;Run&quot;,
-    &quot;Python.02JSON输出解析器.executor&quot;: &quot;Run&quot;,
-    &quot;Python.02LCEL例子.executor&quot;: &quot;Run&quot;,
-    &quot;Python.02对话提示词模板.executor&quot;: &quot;Run&quot;,
-    &quot;Python.03Pydantic模型解析器.executor&quot;: &quot;Run&quot;,
-    &quot;Python.03Runnable.executor&quot;: &quot;Run&quot;,
-    &quot;Python.03chatdeepseek.executor&quot;: &quot;Run&quot;,
-    &quot;Python.03消息占位符.executor&quot;: &quot;Run&quot;,
-    &quot;Python.04ChatZhipuAI.executor&quot;: &quot;Run&quot;,
-    &quot;Python.04Runnable串行.executor&quot;: &quot;Run&quot;,
-    &quot;Python.04少样本提示词模板.executor&quot;: &quot;Run&quot;,
-    &quot;Python.04手动修复.executor&quot;: &quot;Run&quot;,
-    &quot;Python.05加载外部提示词.executor&quot;: &quot;Run&quot;,
-    &quot;Python.05统一模型.executor&quot;: &quot;Run&quot;,
-    &quot;Python.05自动修复解析器.executor&quot;: &quot;Run&quot;,
-    &quot;Python.06保留上下文.executor&quot;: &quot;Run&quot;,
-    &quot;Python.06报错重试解析器.executor&quot;: &quot;Run&quot;,
-    &quot;Python.06部分填充提示词.executor&quot;: &quot;Run&quot;,
-    &quot;Python.07提示词的输入输出方式.executor&quot;: &quot;Run&quot;,
-    &quot;Python.07组合拼接提示词模板.executor&quot;: &quot;Run&quot;,
-    &quot;Python.07自定义jiexq.executor&quot;: &quot;Run&quot;,
-    &quot;Python.config.executor&quot;: &quot;Run&quot;,
-    &quot;Python.language.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
-    &quot;last_opened_file_path&quot;: &quot;S:/目前课上进度/PythonProject/00传统开发/08LangChain/practice&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.jshint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.jshint&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;python.packages.toolwindow.project.migrated.to.right.top.v2&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;memory.settings&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\asasslh11\\AppData\\Local\\JetBrains\\PyCharm2026.3\\ts-go-native-preview\\v7.1.0-dev.jetbrains.20261006.2\\node_modules\\@typescript\\typescript-win32-x64\\lib&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Node.js.test.ts.executor": "Run",
+    "Python.01LCEL表达式介绍.executor": "Run",
+    "Python.01字符串提示词模板.executor": "Run",
+    "Python.01字符串输出解析器.executor": "Run",
+    "Python.01调用openai.executor": "Run",
+    "Python.02JSON输出解析器.executor": "Run",
+    "Python.02LCEL例子.executor": "Run",
+    "Python.02对话提示词模板.executor": "Run",
+    "Python.03Pydantic模型解析器.executor": "Run",
+    "Python.03Runnable.executor": "Run",
+    "Python.03chatdeepseek.executor": "Run",
+    "Python.03消息占位符.executor": "Run",
+    "Python.04.Runnable并行.executor": "Run",
+    "Python.04ChatZhipuAI.executor": "Run",
+    "Python.04Runnable串行.executor": "Run",
+    "Python.04少样本提示词模板.executor": "Run",
+    "Python.04手动修复.executor": "Run",
+    "Python.05.透传组件.executor": "Run",
+    "Python.05加载外部提示词.executor": "Run",
+    "Python.05统一模型.executor": "Run",
+    "Python.05自动修复解析器.executor": "Run",
+    "Python.06保留上下文.executor": "Run",
+    "Python.06报错重试解析器.executor": "Run",
+    "Python.06部分填充提示词.executor": "Run",
+    "Python.07提示词的输入输出方式.executor": "Run",
+    "Python.07组合拼接提示词模板.executor": "Run",
+    "Python.07自定义jiexq.executor": "Run",
+    "Python.config.executor": "Run",
+    "Python.language.executor": "Run",
+    "Python.学习路径规划器.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "javascript.preferred.runtime.type.id": "node",
+    "last_opened_file_path": "S:/目前课上进度/PythonProject/00传统开发/08LangChain/04LCEL",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.jshint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.jshint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "python.packages.toolwindow.project.migrated.to.right.top.v2": "true",
+    "settings.editor.selected.configurable": "com.intellij.python.lsp.core.PyTypeEngineConfigurable",
+    "ts.external.directory.path": "C:\\Users\\asasslh11\\AppData\\Local\\JetBrains\\PyCharm2026.3\\ts-go-native-preview\\v7.1.0-dev.jetbrains.20261006.2\\node_modules\\@typescript\\typescript-win32-x64\\lib"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql",
+      "redis"
+    ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="S:\目前课上进度\PythonProject\00传统开发\08LangChain\04LCEL" />
       <recent name="S:\目前课上进度\PythonProject\00传统开发\08LangChain\practice" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.03Pydantic模型解析器">
+  <component name="RunManager">
     <configuration name="03Pydantic模型解析器" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="08langchain" />
       <option name="ENV_FILES" value="" />
@@ -338,7 +371,7 @@
       <workItem from="1794444394259" duration="11242000" />
       <workItem from="1794455918437" duration="9470000" />
       <workItem from="1794469047105" duration="12346000" />
-      <workItem from="1794529668447" duration="334000" />
+      <workItem from="1794529668447" duration="20384000" />
     </task>
     <task id="LOCAL-00001" summary="修改llm配置">
       <option name="closed" value="true" />
@@ -356,7 +389,15 @@
       <option name="project" value="LOCAL" />
       <updated>1794392772794</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="添加LCEL练习">
+      <option name="closed" value="true" />
+      <created>1794530106188</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1794530106188</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -373,7 +414,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="gitee/master" />
+                        <option value="github/main" />
                       </list>
                     </value>
                   </entry>
@@ -388,22 +429,26 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="修改llm配置" />
     <MESSAGE value="输出解析新增三种提示词输入方式与应用案例" />
-    <option name="LAST_COMMIT_MESSAGE" value="输出解析新增三种提示词输入方式与应用案例" />
+    <MESSAGE value="添加LCEL练习" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加LCEL练习" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/08LangChain$01LCEL.coverage" NAME="01LCEL表达式介绍 覆盖结果" MODIFIED="1794446656546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/04LCEL" />
     <SUITE FILE_PATH="coverage/08LangChain$01.coverage" NAME="01字符串输出解析器 覆盖结果" MODIFIED="1794289456530" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/03OutPutParser" />
-    <SUITE FILE_PATH="coverage/08LangChain$language.coverage" NAME="language 覆盖结果" MODIFIED="1794484627920" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/practice" />
+    <SUITE FILE_PATH="coverage/08LangChain$language.coverage" NAME="language 覆盖结果" MODIFIED="1794530458107" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/practice" />
     <SUITE FILE_PATH="coverage/08LangChain$07.coverage" NAME="07组合拼接提示词模板 覆盖结果" MODIFIED="1794281450468" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/02PromptTemplate" />
     <SUITE FILE_PATH="coverage/08LangChain$03chatdeepseek.coverage" NAME="03chatdeepseek 覆盖结果" MODIFIED="1794193360790" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/01chat-model" />
     <SUITE FILE_PATH="coverage/08LangChain$config.coverage" NAME="config 覆盖结果" MODIFIED="1794202783259" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/08LangChain$01openai.coverage" NAME="01调用openai 覆盖结果" MODIFIED="1794192388246" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/01chat-model" />
-    <SUITE FILE_PATH="coverage/08LangChain$03.coverage" NAME="03消息占位符 覆盖结果" MODIFIED="1794273433120" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/02PromptTemplate" />
+    <SUITE FILE_PATH="coverage/08LangChain$03.coverage" NAME="03消息占位符 覆盖结果" MODIFIED="1794559643622" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/02PromptTemplate" />
     <SUITE FILE_PATH="coverage/08LangChain$06.coverage" NAME="06报错重试解析器 覆盖结果" MODIFIED="1794383021562" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/03OutPutParser" />
+    <SUITE FILE_PATH="coverage/08LangChain$05_.coverage" NAME="05.透传组件 覆盖结果" MODIFIED="1794539548130" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/04LCEL" />
     <SUITE FILE_PATH="coverage/08LangChain$03Runnable.coverage" NAME="03Runnable 覆盖结果" MODIFIED="1794451969179" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/04LCEL" />
     <SUITE FILE_PATH="coverage/08LangChain$02JSON.coverage" NAME="02JSON输出解析器 覆盖结果" MODIFIED="1794292529885" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/03OutPutParser" />
     <SUITE FILE_PATH="coverage/08LangChain$02.coverage" NAME="02对话提示词模板 覆盖结果" MODIFIED="1794213530683" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/02PromptTemplate" />
+    <SUITE FILE_PATH="coverage/08LangChain$04_Runnable.coverage" NAME="04.Runnable并行 覆盖结果" MODIFIED="1794539307306" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/04LCEL" />
     <SUITE FILE_PATH="coverage/08LangChain$03Pydantic.coverage" NAME="03Pydantic模型解析器 覆盖结果" MODIFIED="1794478106367" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/03OutPutParser" />
+    <SUITE FILE_PATH="coverage/08LangChain$.coverage" NAME="学习路径规划器 覆盖结果" MODIFIED="1794530428387" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/practice" />
     <SUITE FILE_PATH="coverage/08LangChain$04ChatZhipuAI.coverage" NAME="04ChatZhipuAI 覆盖结果" MODIFIED="1794202814417" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/01chat-model" />
     <SUITE FILE_PATH="coverage/08LangChain$05.coverage" NAME="05自动修复解析器 覆盖结果" MODIFIED="1794368788482" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/03OutPutParser" />
     <SUITE FILE_PATH="coverage/08LangChain$04Runnable.coverage" NAME="04Runnable串行 覆盖结果" MODIFIED="1794466739445" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/04LCEL" />
