@@ -32,7 +32,8 @@ final_template1 = chat_prompt_template.format_messages(
     角色 = "齐天大圣",
     风格 = "狂妄，急躁，喜欢动手",
     字数 = "100",
-    input = "悟空你回来了，那河里有什么"
+    input = "悟空，我们什么时候到女儿国",
+    history = history_message,
 )
 print(final_template1,type(final_template1))
 
@@ -46,14 +47,17 @@ print(final_template1,type(final_template1))
 # # print(final_template2,type(final_template2))
 #
 # # 初始化客户端
-# llm = init_chat_model(
-#     # qwen3.8-flash
-#     model = "qwen3.8-flash",
-#     api_key = DASHSCOPE_API_KEY,
-#     base_url = DASHSCOPE_BASE_URL,
-#     model_provider = "openai"
-#
-# )
+llm = init_chat_model(
+    # qwen3.8-flash
+    model = "qwen3.8-flash",
+    api_key = DASHSCOPE_API_KEY,
+    base_url = DASHSCOPE_BASE_URL,
+    model_provider = "openai"
+
+)
+
+res = llm.invoke(final_template1)
+print(res.content)
 #
 # res = llm.invoke(final_template1)
 # print(res.content)
