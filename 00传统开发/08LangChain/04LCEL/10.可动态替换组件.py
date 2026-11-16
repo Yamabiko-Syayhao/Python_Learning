@@ -26,18 +26,20 @@ class Coupon_Calc(RunnableSerializable):
             "use_coupon": use_coupon, # 是否使用优惠
             "pay_after_coupon": final, #
         }
+
+
 # 将类当中的两个变量标记为“运行时可动态修改的配置字段”
 # configurable_fields() 返回新对象 必须赋值接收
 base_coupon = Coupon_Calc().configurable_fields(
-    full_money = ConfigurableField(
-        id = "full_money", # 配置唯一标识 必须跟属性名一致 修改配置时用这个id
-        name = "满减门槛", # 中文展示名称 用于文档展示
-        description="达到该门槛时才能使用优惠卷" # 字段描述说明
+    full_money=ConfigurableField(
+        id="full_money",  # 配置唯一标识 必须跟属性名一致 修改配置时用这个id
+        name="满减门槛",  # 中文展示名称 用于文档展示
+        description="达到该门槛时才能使用优惠卷"  # 字段描述说明
     ),
-    reduce_money = ConfigurableField(
-        id = "reduce_money",
-        name = "减免金额",
-        description = "满足门槛抵扣多少钱"
+    reduce_money=ConfigurableField(
+        id="reduce_money",
+        name="减免金额",
+        description="满足门槛抵扣多少钱"
     )
 )
 

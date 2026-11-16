@@ -391,7 +391,7 @@
       <workItem from="1794639001735" duration="2555000" />
       <workItem from="1794789266899" duration="19453000" />
       <workItem from="1794813667266" duration="4026000" />
-      <workItem from="1794817742670" duration="527000" />
+      <workItem from="1794817742670" duration="828000" />
     </task>
     <task id="LOCAL-00001" summary="修改llm配置">
       <option name="closed" value="true" />
@@ -513,7 +513,39 @@
       <option name="project" value="LOCAL" />
       <updated>1794818254176</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="添加LCEL config">
+      <option name="closed" value="true" />
+      <created>1794818363906</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1794818363906</updated>
+    </task>
+    <task id="LOCAL-00017" summary="大模型记忆组件练习">
+      <option name="closed" value="true" />
+      <created>1794818409805</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1794818409805</updated>
+    </task>
+    <task id="LOCAL-00018" summary="配置更新">
+      <option name="closed" value="true" />
+      <created>1794818416339</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1794818416339</updated>
+    </task>
+    <task id="LOCAL-00019" summary="配置更新">
+      <option name="closed" value="true" />
+      <created>1794818519799</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1794818519799</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -556,6 +588,8 @@
     <MESSAGE value="添加LCEL条件分支相关" />
     <MESSAGE value="添加LCEL条件重试机制相关" />
     <MESSAGE value="添加LCEL可动态替换组件相关" />
+    <MESSAGE value="添加LCEL config" />
+    <MESSAGE value="大模型记忆组件练习" />
     <MESSAGE value="配置更新" />
     <option name="LAST_COMMIT_MESSAGE" value="配置更新" />
   </component>
