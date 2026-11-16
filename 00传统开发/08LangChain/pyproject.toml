@@ -9,4 +9,6 @@ dependencies = [
     "langchain-deepseek>=1.1.1",
     "langchain-openai>=1.7.4",
     "pyjwt>=2.15.1",
+    "sqlalchemy[asyncio]>=2.1.8",
+    "pymysql>=1.2.4"
 ]
