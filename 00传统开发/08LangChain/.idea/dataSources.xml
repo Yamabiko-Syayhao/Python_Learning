@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="Local instance MySQL80" uuid="ead54f20-ea34-497b-b954-8f2e50aa8147">
+    <data-source source="LOCAL" name="chat-history" uuid="992c658d-6fea-4da2-906e-4c032b02b25b">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/05记忆组件/chat-history.db</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="chat_history@localhost" uuid="bf212ec8-010d-47e2-ace1-b17bbf03edf8">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/assessment_management</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/chat_history</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>
