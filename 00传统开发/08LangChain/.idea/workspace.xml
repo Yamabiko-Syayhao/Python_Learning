@@ -15,7 +15,11 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2acb38ad-8823-4e8e-a626-259e87840cd2" name="更改" comment="" />
+    <list default="true" id="2acb38ad-8823-4e8e-a626-259e87840cd2" name="更改" comment="description">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uv.lock" beforeDir="false" afterPath="$PROJECT_DIR$/uv.lock" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -74,61 +78,61 @@
 }</component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="9.273649101081988E-12" />
-      <entry key="MS500" value="0.0062151287793353015" />
-      <entry key="S2" value="0.2807777017924301" />
-      <entry key="S5" value="0.6042154152340937" />
-      <entry key="S10" value="0.8912286926671769" />
-      <entry key="S30" value="2.7799274317825358" />
-      <entry key="S60" value="5.565946211098767" />
-      <entry key="M2" value="10.83538904171545" />
-      <entry key="M5" value="23.151057896740795" />
-      <entry key="M10" value="38.040910461563946" />
-      <entry key="M15" value="52.613140904707684" />
-      <entry key="M30" value="98.65999171020057" />
-      <entry key="H1" value="185.00830726683316" />
-      <entry key="H2" value="379.3206771328387" />
-      <entry key="H4" value="760.7251437104002" />
-      <entry key="D1" value="1966.2653684794705" />
-      <entry key="W1" value="2490.76303665665" />
+      <entry key="MS100" value="1.0000311588173127" />
+      <entry key="MS500" value="1.1255209429048716" />
+      <entry key="S2" value="1.595222100670879" />
+      <entry key="S5" value="1.8125902728858772" />
+      <entry key="S10" value="1.9014378918627046" />
+      <entry key="S30" value="1.9660032848496338" />
+      <entry key="S60" value="1.9828546611018507" />
+      <entry key="M2" value="1.9913902669070516" />
+      <entry key="M5" value="1.9978295855728239" />
+      <entry key="M10" value="2.376606551595674" />
+      <entry key="M15" value="4.761497001667387" />
+      <entry key="M30" value="26.171816813286256" />
+      <entry key="H1" value="91.22499613048464" />
+      <entry key="H2" value="242.7767762235935" />
+      <entry key="H4" value="605.5078357931977" />
+      <entry key="D1" value="2758.016532928475" />
+      <entry key="W1" value="4154.815976835122" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0000403799883317" />
-      <entry key="S2" value="1.080573116734048" />
-      <entry key="S5" value="1.4229360335500358" />
-      <entry key="S10" value="1.8465898573125614" />
-      <entry key="S30" value="2.469378176153879" />
-      <entry key="S60" value="2.71218618886524" />
-      <entry key="M2" value="2.9002434503754086" />
-      <entry key="M5" value="3.245316601390211" />
-      <entry key="M10" value="3.578518509919956" />
-      <entry key="M15" value="4.007792946557721" />
-      <entry key="M30" value="6.410326506756261" />
-      <entry key="H1" value="12.744041072279424" />
-      <entry key="H2" value="27.763106796592535" />
-      <entry key="H4" value="56.05635179543974" />
-      <entry key="D1" value="149.63267410954873" />
-      <entry key="W1" value="193.6486904369861" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="2.5493697244464624E-270" />
+      <entry key="S10" value="2.2632816527947902E-135" />
+      <entry key="S30" value="2.3052668255528536E-45" />
+      <entry key="S60" value="8.139367370815123E-23" />
+      <entry key="M2" value="1.777401172516695E-11" />
+      <entry key="M5" value="1.6823599600521565E-4" />
+      <entry key="M10" value="0.04629063226837649" />
+      <entry key="M15" value="0.3390519544782849" />
+      <entry key="M30" value="3.213754620512122" />
+      <entry key="H1" value="12.589899350548304" />
+      <entry key="H2" value="30.57034310525457" />
+      <entry key="H4" value="61.58478563385874" />
+      <entry key="D1" value="222.5408566950724" />
+      <entry key="W1" value="330.6139282456324" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="5.822216831607359E-6" />
-      <entry key="MS500" value="0.09064946090370994" />
-      <entry key="S2" value="0.7832838983614423" />
-      <entry key="S5" value="1.6670663942896253" />
-      <entry key="S10" value="2.511052896462102" />
-      <entry key="S30" value="5.155701124387659" />
-      <entry key="S60" value="8.22779710495221" />
-      <entry key="M2" value="13.70696401228936" />
-      <entry key="M5" value="26.379497658437472" />
-      <entry key="M10" value="41.608008276105245" />
-      <entry key="M15" value="56.61106593261981" />
-      <entry key="M30" value="105.05915616508221" />
-      <entry key="H1" value="197.73830297708645" />
-      <entry key="H2" value="407.06732666056" />
-      <entry key="H4" value="816.7647369807444" />
-      <entry key="D1" value="2115.8903773823286" />
-      <entry key="W1" value="2684.41028670849" />
+      <entry key="MS100" value="0.8827328858261035" />
+      <entry key="MS500" value="1.099836680664449" />
+      <entry key="S2" value="1.587766750432365" />
+      <entry key="S5" value="1.8094224412138056" />
+      <entry key="S10" value="1.8998161854149969" />
+      <entry key="S30" value="1.9654535758021465" />
+      <entry key="S60" value="1.9825786146338682" />
+      <entry key="M2" value="1.9912519418789607" />
+      <entry key="M5" value="1.9979391351171902" />
+      <entry key="M10" value="2.422389696518416" />
+      <entry key="M15" value="5.098199767100468" />
+      <entry key="M30" value="29.37537241386326" />
+      <entry key="H1" value="103.79693387412772" />
+      <entry key="H2" value="273.3272096769439" />
+      <entry key="H4" value="667.0740203021884" />
+      <entry key="D1" value="2980.5466638652033" />
+      <entry key="W1" value="4485.427596392855" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -140,87 +144,106 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Node.js.test.ts.executor&quot;: &quot;Run&quot;,
-    &quot;Python.01-大模型没有记忆.executor&quot;: &quot;Run&quot;,
-    &quot;Python.01LCEL表达式介绍.executor&quot;: &quot;Run&quot;,
-    &quot;Python.01字符串提示词模板.executor&quot;: &quot;Run&quot;,
-    &quot;Python.01字符串输出解析器.executor&quot;: &quot;Run&quot;,
-    &quot;Python.01调用openai.executor&quot;: &quot;Run&quot;,
-    &quot;Python.02JSON输出解析器.executor&quot;: &quot;Run&quot;,
-    &quot;Python.02LCEL例子.executor&quot;: &quot;Run&quot;,
-    &quot;Python.02对话提示词模板.executor&quot;: &quot;Run&quot;,
-    &quot;Python.02消息占位符组件.executor&quot;: &quot;Run&quot;,
-    &quot;Python.03Pydantic模型解析器.executor&quot;: &quot;Run&quot;,
-    &quot;Python.03Runnable.executor&quot;: &quot;Run&quot;,
-    &quot;Python.03chatdeepseek.executor&quot;: &quot;Run&quot;,
-    &quot;Python.03消息占位符.executor&quot;: &quot;Run&quot;,
-    &quot;Python.04.Runnable并行.executor&quot;: &quot;Run&quot;,
-    &quot;Python.04ChatZhipuAI.executor&quot;: &quot;Run&quot;,
-    &quot;Python.04Runnable串行.executor&quot;: &quot;Run&quot;,
-    &quot;Python.04少样本提示词模板.executor&quot;: &quot;Run&quot;,
-    &quot;Python.04手动修复.executor&quot;: &quot;Run&quot;,
-    &quot;Python.04自动带记忆的执行链.executor&quot;: &quot;Run&quot;,
-    &quot;Python.05.Runnable并行.executor&quot;: &quot;Run&quot;,
-    &quot;Python.05.透传组件.executor&quot;: &quot;Run&quot;,
-    &quot;Python.05sql持久化聊天记录.executor&quot;: &quot;Run&quot;,
-    &quot;Python.05加载外部提示词.executor&quot;: &quot;Run&quot;,
-    &quot;Python.05统一模型.executor&quot;: &quot;Run&quot;,
-    &quot;Python.05自动修复解析器.executor&quot;: &quot;Run&quot;,
-    &quot;Python.06mysql持久化聊天记录.executor&quot;: &quot;Run&quot;,
-    &quot;Python.06保留上下文.executor&quot;: &quot;Run&quot;,
-    &quot;Python.06报错重试解析器.executor&quot;: &quot;Run&quot;,
-    &quot;Python.06部分填充提示词.executor&quot;: &quot;Run&quot;,
-    &quot;Python.07.条件分支.executor&quot;: &quot;Run&quot;,
-    &quot;Python.07提示词的输入输出方式.executor&quot;: &quot;Run&quot;,
-    &quot;Python.07组合拼接提示词模板.executor&quot;: &quot;Run&quot;,
-    &quot;Python.07自定义jiexq.executor&quot;: &quot;Run&quot;,
-    &quot;Python.08重试机制.executor&quot;: &quot;Run&quot;,
-    &quot;Python.10.可动态替换组件.executor&quot;: &quot;Run&quot;,
-    &quot;Python.config.executor&quot;: &quot;Run&quot;,
-    &quot;Python.language.executor&quot;: &quot;Run&quot;,
-    &quot;Python.学习路径规划器.executor&quot;: &quot;Run&quot;,
-    &quot;Python.聊天历史存储对象.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
-    &quot;last_opened_file_path&quot;: &quot;S:/目前课上进度/PythonProject/00传统开发/08LangChain/05记忆组件&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.jshint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.jshint&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;python.packages.toolwindow.project.migrated.to.right.top.v2&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\asasslh11\\AppData\\Local\\JetBrains\\PyCharm2026.3\\ts-go-native-preview\\v7.1.0-dev.jetbrains.20261006.2\\node_modules\\@typescript\\typescript-win32-x64\\lib&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Node.js.test.ts.executor": "Run",
+    "Python.01-大模型没有记忆.executor": "Run",
+    "Python.01LCEL表达式介绍.executor": "Run",
+    "Python.01字符串提示词模板.executor": "Run",
+    "Python.01字符串输出解析器.executor": "Run",
+    "Python.01调用openai.executor": "Run",
+    "Python.02JSON输出解析器.executor": "Run",
+    "Python.02LCEL例子.executor": "Run",
+    "Python.02TextLoader.executor": "Run",
+    "Python.02对话提示词模板.executor": "Run",
+    "Python.02消息占位符组件.executor": "Run",
+    "Python.02通用文本处理.executor": "Run",
+    "Python.03CharacterTextSplitter.executor": "Run",
+    "Python.03PyPDFLoader.executor": "Run",
+    "Python.03Pydantic模型解析器.executor": "Run",
+    "Python.03Runnable.executor": "Run",
+    "Python.03chatdeepseek.executor": "Run",
+    "Python.03消息占位符.executor": "Run",
+    "Python.03聊天历史存储对象.executor": "Run",
+    "Python.04.Runnable并行.executor": "Run",
+    "Python.04CSVLoader.executor": "Run",
+    "Python.04ChatZhipuAI.executor": "Run",
+    "Python.04Runnable串行.executor": "Run",
+    "Python.04Token.executor": "Run",
+    "Python.04TokenTextSplitter.executor": "Run",
+    "Python.04少样本提示词模板.executor": "Run",
+    "Python.04手动修复.executor": "Run",
+    "Python.04自动带记忆的执行链.executor": "Run",
+    "Python.05.Runnable并行.executor": "Run",
+    "Python.05.透传组件.executor": "Run",
+    "Python.05Docx2txtLoader.executor": "Run",
+    "Python.05TikToken02.executor": "Run",
+    "Python.05sql持久化聊天记录.executor": "Run",
+    "Python.05加载外部提示词.executor": "Run",
+    "Python.05统一模型.executor": "Run",
+    "Python.05自动修复解析器.executor": "Run",
+    "Python.06MarkdownHeaderTextSplitter.executor": "Run",
+    "Python.06WebBaseLoader.executor": "Run",
+    "Python.06mysql持久化聊天记录.executor": "Run",
+    "Python.06保留上下文.executor": "Run",
+    "Python.06报错重试解析器.executor": "Run",
+    "Python.06部分填充提示词.executor": "Run",
+    "Python.07.条件分支.executor": "Run",
+    "Python.07UnstructuredMarkdownLoader.executor": "Run",
+    "Python.07提示词的输入输出方式.executor": "Run",
+    "Python.07组合拼接提示词模板.executor": "Run",
+    "Python.07自定义jiexq.executor": "Run",
+    "Python.08重试机制.executor": "Run",
+    "Python.10.可动态替换组件.executor": "Run",
+    "Python.config.executor": "Run",
+    "Python.language.executor": "Run",
+    "Python.学习路径规划器.executor": "Run",
+    "Python.练习14.executor": "Run",
+    "Python.聊天历史存储对象.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "javascript.preferred.runtime.type.id": "node",
+    "last_opened_file_path": "S:/目前课上进度/PythonProject/00传统开发/08LangChain/practice",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.jshint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.jshint": "",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "python.packages.toolwindow.project.migrated.to.right.top.v2": "true",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "C:\\Users\\asasslh11\\AppData\\Local\\JetBrains\\PyCharm2026.3\\ts-go-native-preview\\v7.1.0-dev.jetbrains.20261006.2\\node_modules\\@typescript\\typescript-win32-x64\\lib"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;,
-      &quot;redis&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql",
+      "redis"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="S:\目前课上进度\PythonProject\00传统开发\08LangChain\05记忆组件" />
-      <recent name="S:\目前课上进度\PythonProject\00传统开发\08LangChain\04LCEL" />
+      <recent name="S:\目前课上进度\PythonProject\00传统开发\08LangChain\practice" />
+      <recent name="S:\目前课上进度\PythonProject\00传统开发\08LangChain\07splitter" />
+      <recent name="S:\目前课上进度\PythonProject\00传统开发\08LangChain\dataset" />
+      <recent name="S:\目前课上进度\PythonProject\00传统开发\08LangChain" />
+      <recent name="S:\目前课上进度\PythonProject\00传统开发\08LangChain\06文档加载" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="S:\目前课上进度\PythonProject\00传统开发\08LangChain\practice" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.06mysql持久化聊天记录">
-    <configuration name="02消息占位符组件" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.练习14">
+    <configuration name="03CharacterTextSplitter" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="08langchain" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -229,14 +252,14 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/05记忆组件" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/07splitter" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="RUN_TOOL" value="" />
       <option name="RUN_AS_SCRIPT" value="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/05记忆组件/02消息占位符组件.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/07splitter/03CharacterTextSplitter.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -245,7 +268,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="03聊天历史存储对象" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="04TokenTextSplitter" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="08langchain" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -254,14 +277,14 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/05记忆组件" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/07splitter" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="RUN_TOOL" value="" />
       <option name="RUN_AS_SCRIPT" value="" />
-      <option name="SCRIPT_NAME" value="S:\目前课上进度\PythonProject\00传统开发\08LangChain\05记忆组件\03聊天历史存储对象.py" />
+      <option name="SCRIPT_NAME" value="S:\目前课上进度\PythonProject\00传统开发\08LangChain\07splitter\04TokenTextSplitter.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -270,7 +293,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="04自动带记忆的执行链" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="05TikToken02" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="08langchain" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -279,14 +302,14 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/05记忆组件" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/07splitter" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="RUN_TOOL" value="" />
       <option name="RUN_AS_SCRIPT" value="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/05记忆组件/04自动带记忆的执行链.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/07splitter/05TikToken02.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -295,7 +318,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="05sql持久化聊天记录" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="06MarkdownHeaderTextSplitter" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="08langchain" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -304,14 +327,14 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/05记忆组件" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/07splitter" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="RUN_TOOL" value="" />
       <option name="RUN_AS_SCRIPT" value="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/05记忆组件/05sql持久化聊天记录.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/07splitter/06MarkdownHeaderTextSplitter.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -320,7 +343,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="06mysql持久化聊天记录" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="练习14" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="08langchain" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -329,14 +352,14 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/05记忆组件" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/practice" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="RUN_TOOL" value="" />
       <option name="RUN_AS_SCRIPT" value="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/05记忆组件/06mysql持久化聊天记录.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/practice/练习14.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -347,11 +370,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.06mysql持久化聊天记录" />
-        <item itemvalue="Python.05sql持久化聊天记录" />
-        <item itemvalue="Python.04自动带记忆的执行链" />
-        <item itemvalue="Python.03聊天历史存储对象" />
-        <item itemvalue="Python.02消息占位符组件" />
+        <item itemvalue="Python.练习14" />
+        <item itemvalue="Python.06MarkdownHeaderTextSplitter" />
+        <item itemvalue="Python.05TikToken02" />
+        <item itemvalue="Python.04TokenTextSplitter" />
+        <item itemvalue="Python.03CharacterTextSplitter" />
       </list>
     </recent_temporary>
   </component>
@@ -391,7 +414,9 @@
       <workItem from="1794639001735" duration="2555000" />
       <workItem from="1794789266899" duration="19453000" />
       <workItem from="1794813667266" duration="4026000" />
-      <workItem from="1794817742670" duration="828000" />
+      <workItem from="1794817742670" duration="8442000" />
+      <workItem from="1794875888407" duration="27139000" />
+      <workItem from="1794962696131" duration="25497000" />
     </task>
     <task id="LOCAL-00001" summary="修改llm配置">
       <option name="closed" value="true" />
@@ -545,7 +570,15 @@
       <option name="project" value="LOCAL" />
       <updated>1794818519799</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="格式修正">
+      <option name="closed" value="true" />
+      <created>1794818661182</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1794818661182</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -591,37 +624,49 @@
     <MESSAGE value="添加LCEL config" />
     <MESSAGE value="大模型记忆组件练习" />
     <MESSAGE value="配置更新" />
-    <option name="LAST_COMMIT_MESSAGE" value="配置更新" />
+    <MESSAGE value="格式修正" />
+    <option name="LAST_COMMIT_MESSAGE" value="格式修正" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/08LangChain$03PyPDFLoader.coverage" NAME="03PyPDFLoader 覆盖结果" MODIFIED="1794886388267" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/06文档加载" />
     <SUITE FILE_PATH="coverage/08LangChain$01_.coverage" NAME="01-大模型没有记忆 覆盖结果" MODIFIED="1794790549851" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/05记忆组件" />
     <SUITE FILE_PATH="coverage/08LangChain$01.coverage" NAME="01字符串输出解析器 覆盖结果" MODIFIED="1794289456530" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/03OutPutParser" />
     <SUITE FILE_PATH="coverage/08LangChain$language.coverage" NAME="language 覆盖结果" MODIFIED="1794530458107" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/practice" />
     <SUITE FILE_PATH="coverage/08LangChain$03chatdeepseek.coverage" NAME="03chatdeepseek 覆盖结果" MODIFIED="1794193360790" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/01chat-model" />
     <SUITE FILE_PATH="coverage/08LangChain$07.coverage" NAME="07组合拼接提示词模板 覆盖结果" MODIFIED="1794281450468" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/02PromptTemplate" />
+    <SUITE FILE_PATH="coverage/08LangChain$02TextLoader.coverage" NAME="02TextLoader 覆盖结果" MODIFIED="1794885912976" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/06文档加载" />
     <SUITE FILE_PATH="coverage/08LangChain$05_.coverage" NAME="05.透传组件 覆盖结果" MODIFIED="1794539548130" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/04LCEL" />
     <SUITE FILE_PATH="coverage/08LangChain$02JSON.coverage" NAME="02JSON输出解析器 覆盖结果" MODIFIED="1794292529885" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/03OutPutParser" />
+    <SUITE FILE_PATH="coverage/08LangChain$06MarkdownHeaderTextSplitter.coverage" NAME="06MarkdownHeaderTextSplitter 覆盖结果" MODIFIED="1794986158943" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/07splitter" />
+    <SUITE FILE_PATH="coverage/08LangChain$05Docx2txtLoader.coverage" NAME="05Docx2txtLoader 覆盖结果" MODIFIED="1794896957027" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/06文档加载" />
+    <SUITE FILE_PATH="coverage/08LangChain$03CharacterTextSplitter.coverage" NAME="03CharacterTextSplitter 覆盖结果" MODIFIED="1794967434995" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/07splitter" />
+    <SUITE FILE_PATH="coverage/08LangChain$07UnstructuredMarkdownLoader.coverage" NAME="07UnstructuredMarkdownLoader 覆盖结果" MODIFIED="1794902772349" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/06文档加载" />
     <SUITE FILE_PATH="coverage/08LangChain$04ChatZhipuAI.coverage" NAME="04ChatZhipuAI 覆盖结果" MODIFIED="1794202814417" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/01chat-model" />
     <SUITE FILE_PATH="coverage/08LangChain$05.coverage" NAME="05自动修复解析器 覆盖结果" MODIFIED="1794368788482" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/03OutPutParser" />
+    <SUITE FILE_PATH="coverage/08LangChain$14.coverage" NAME="练习14 覆盖结果" MODIFIED="1794991908933" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/practice" />
     <SUITE FILE_PATH="coverage/08LangChain$04Runnable.coverage" NAME="04Runnable串行 覆盖结果" MODIFIED="1794466739445" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/04LCEL" />
     <SUITE FILE_PATH="coverage/08LangChain$07jiexq.coverage" NAME="07自定义jiexq 覆盖结果" MODIFIED="1794386917850" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/03OutPutParser" />
     <SUITE FILE_PATH="coverage/08LangChain$02LCEL.coverage" NAME="02LCEL例子 覆盖结果" MODIFIED="1794450461306" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/04LCEL" />
+    <SUITE FILE_PATH="coverage/08LangChain$06WebBaseLoader.coverage" NAME="06WebBaseLoader 覆盖结果" MODIFIED="1794900535948" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/06文档加载" />
     <SUITE FILE_PATH="coverage/08LangChain$08.coverage" NAME="08重试机制 覆盖结果" MODIFIED="1794626061021" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/04LCEL" />
     <SUITE FILE_PATH="coverage/08LangChain$05sql.coverage" NAME="05sql持久化聊天记录 覆盖结果" MODIFIED="1794815979822" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/05记忆组件" />
     <SUITE FILE_PATH="coverage/08LangChain$01LCEL.coverage" NAME="01LCEL表达式介绍 覆盖结果" MODIFIED="1794446656546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/04LCEL" />
     <SUITE FILE_PATH="coverage/08LangChain$config.coverage" NAME="config 覆盖结果" MODIFIED="1794202783259" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/08LangChain$01openai.coverage" NAME="01调用openai 覆盖结果" MODIFIED="1794192388246" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/01chat-model" />
-    <SUITE FILE_PATH="coverage/08LangChain$03.coverage" NAME="03消息占位符 覆盖结果" MODIFIED="1794559643622" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/02PromptTemplate" />
+    <SUITE FILE_PATH="coverage/08LangChain$03.coverage" NAME="03聊天历史存储对象 覆盖结果" MODIFIED="1794885918833" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/05记忆组件" />
     <SUITE FILE_PATH="coverage/08LangChain$06.coverage" NAME="06报错重试解析器 覆盖结果" MODIFIED="1794383021562" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/03OutPutParser" />
+    <SUITE FILE_PATH="coverage/08LangChain$04CSVLoader.coverage" NAME="04CSVLoader 覆盖结果" MODIFIED="1794886769946" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/06文档加载" />
     <SUITE FILE_PATH="coverage/08LangChain$03Runnable.coverage" NAME="03Runnable 覆盖结果" MODIFIED="1794451969179" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/04LCEL" />
     <SUITE FILE_PATH="coverage/08LangChain$04_Runnable.coverage" NAME="04.Runnable并行 覆盖结果" MODIFIED="1794539307306" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/04LCEL" />
-    <SUITE FILE_PATH="coverage/08LangChain$02.coverage" NAME="02消息占位符组件 覆盖结果" MODIFIED="1794792770534" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/05记忆组件" />
+    <SUITE FILE_PATH="coverage/08LangChain$02.coverage" NAME="02通用文本处理 覆盖结果" MODIFIED="1794965934273" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/07splitter" />
     <SUITE FILE_PATH="coverage/08LangChain$06mysql.coverage" NAME="06mysql持久化聊天记录 覆盖结果" MODIFIED="1794817373553" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/05记忆组件" />
     <SUITE FILE_PATH="coverage/08LangChain$03Pydantic.coverage" NAME="03Pydantic模型解析器 覆盖结果" MODIFIED="1794478106367" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/03OutPutParser" />
     <SUITE FILE_PATH="coverage/08LangChain$.coverage" NAME="聊天历史存储对象 覆盖结果" MODIFIED="1794794790695" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/05记忆组件" />
     <SUITE FILE_PATH="coverage/08LangChain$05_Runnable.coverage" NAME="05.Runnable并行 覆盖结果" MODIFIED="1794618100960" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/04LCEL" />
     <SUITE FILE_PATH="coverage/08LangChain$07_.coverage" NAME="07.条件分支 覆盖结果" MODIFIED="1794621810456" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/04LCEL" />
+    <SUITE FILE_PATH="coverage/08LangChain$04Token.coverage" NAME="04TokenTextSplitter 覆盖结果" MODIFIED="1794972609517" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/07splitter" />
     <SUITE FILE_PATH="coverage/08LangChain$10_.coverage" NAME="10.可动态替换组件 覆盖结果" MODIFIED="1794637516957" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/04LCEL" />
     <SUITE FILE_PATH="coverage/08LangChain$04.coverage" NAME="04自动带记忆的执行链 覆盖结果" MODIFIED="1794800320813" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/05记忆组件" />
+    <SUITE FILE_PATH="coverage/08LangChain$05TikToken02.coverage" NAME="05TikToken02 覆盖结果" MODIFIED="1794972616693" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/07splitter" />
   </component>
 </project>

@@ -10,5 +10,10 @@ dependencies = [
     "langchain-openai>=1.7.4",
     "pyjwt>=2.15.1",
     "sqlalchemy[asyncio]>=2.1.8",
-    "pymysql>=1.2.4"
+    "pymysql>=1.2.4",
+    "pypdf>=7.1.0",
+    "docx2txt>=0.9",
+    "bs4>=0.0.2",
+    "unstructured>=0.27.37",
+    "markdown>=3.11.3",
 ]
