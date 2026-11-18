@@ -1,0 +1,11 @@
+id,first_name,last_name,email,age,city,salary,joined
+1,Liam,Williams,liam.williams1@sample.net,49,Riverside,156973.24,2020-04-18
+2,Jane,Williams,jane.williams2@example.com,71,Fairview,50435.05,2024-01-27
+3,Emma,Moore,emma.moore3@test.org,76,Fairview,128705.61,2022-01-06
+4,Emma,Martinez,emma.martinez4@example.com,43,Burlington,106198.11,2016-01-05
+5,Benjamin,Rodriguez,benjamin.rodriguez5@sample.net,62,Manchester,189641.05,2023-04-19
+6,Amelia,Williams,amelia.williams6@demo.io,34,Manchester,26628.09,2016-08-19
+7,Mia,Jones,mia.jones7@demo.io,21,Ashland,33038.53,2021-01-03
+8,Emma,Lopez,emma.lopez8@demo.io,30,Greenville,146867.05,2015-12-15
+9,Isabella,Lopez,isabella.lopez9@sample.net,29,Greenville,175981.13,2015-01-27
+10,Amelia,Johnson,amelia.johnson10@demo.io,54,Madison,22669.84,2020-03-09
