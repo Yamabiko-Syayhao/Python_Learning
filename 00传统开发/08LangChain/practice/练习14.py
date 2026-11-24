@@ -95,7 +95,5 @@ def talk(session_id: str,question:str):
 if __name__ == "__main__":
     session_id = "user_001"
     talk(session_id,"会员等级有哪些？分别有什么权益？")
-    talk(session_id,"支付失败有哪些可能的原因")
-    talk(session_id,"你刚才说的这些问题，哪些是我作为普通会员可能遇到的")
 
 
