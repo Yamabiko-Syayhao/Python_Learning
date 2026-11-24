@@ -1,0 +1,40 @@
+[project]
+name = "09rag"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Yamabiko-Syayhao", email = "1329362554@qq.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "beautifulsoup4>=4.15.0",
+    "docx2txt>=0.9",
+    "html2text>=2025.4.15",
+    "langchain-community>=0.4.2",
+    "lxml>=6.1.3",
+    "markdownify>=1.2.4",
+    "ollama>=0.6.3",
+    "openai>=3.57.0",
+    "paddleocr==3.3.2",
+    "paddlepaddle>=3.3.1",
+    "pathlib>=1.0.1",
+    "pdf2image>=1.17.0",
+    "pdfplumber>=0.11.10",
+    "pillow>=13.0.0",
+    "playwright>=1.65.2",
+    "pymupdf>=2.1",
+    "pypdf>=7.1.1",
+    "pytesseract>=0.3.13",
+    "python-docx>=1.2.0",
+    "python-pptx>=1.0.2",
+    "pyyaml==6.0.2",
+    "rapidocr>=3.10.0",
+    "rapidocr-onnxruntime>=1.4.4",
+    "setuptools>=84.2.1",
+    "trafilatura>=2.3.1",
+    "unstructured[all-docs]>=0.18.32",
+]
+
+[tool.uv]
+package = false

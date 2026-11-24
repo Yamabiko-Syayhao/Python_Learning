@@ -1,36 +1,36 @@
 {
     "teach_name": "LangChain",
-    "diff": "中等",
-    "goal": "在一周内掌握 LangChain 的核心概念、基本用法，并能够完成一个简单的大模型应用原型",
+    "diff": "中级",
+    "goal": "在一周内掌握LangChain核心组件，能够独立搭建基础大模型应用，如问答链、文档检索问答系统和简易智能体。",
     "days": 7,
     "daily_plan": [
         {
             "day": 1,
-            "task": "学习 LangChain 基础概念，了解模型、提示词、链、内存、工具等核心模块，安装 Python 环境并创建第一个 Hello World 应用"
+            "task": "了解LangChain定位与生态，安装Python环境和依赖，学习模型调用、PromptTemplate、OutputParser基础用法，完成第一个简单LLM调用案例。"
         },
         {
             "day": 2,
-            "task": "学习模型接入与调用，尝试接入 OpenAI 或兼容大模型接口，掌握 PromptTemplate、LLMChain 等基础对象的使用"
+            "task": "学习Chain核心概念，掌握LLMChain、组合链、提示模板变量替换和结构化输出解析，完成一个可复用的文本处理链。"
         },
         {
             "day": 3,
-            "task": "学习内存机制，实现对话历史管理，使用 ConversationBufferMemory 或其他 Memory 类型完成多轮对话案例"
+            "task": "学习文档处理与RAG基础，掌握DocumentLoader、TextSplitter、Embedding、VectorStore和Retriever，完成一个本地文档检索问答Demo。"
         },
         {
             "day": 4,
-            "task": "学习 Chain 的组合方式，练习顺序执行、输入输出映射，完成一个由多个步骤组成的文本处理链"
+            "task": "学习Tool和Agent概念，掌握工具定义、工具调用、ReAct/Function Calling流程，完成一个可以查询天气或计算器工具的智能体。"
         },
         {
             "day": 5,
-            "task": "学习工具调用，掌握 Tool、Agent 等概念，构建一个能调用外部工具或函数的大模型应用"
+            "task": "学习Memory与会话状态，掌握ConversationMemory、历史消息管理和多轮对话构建，完成一个具备上下文记忆的智能问答应用。"
         },
         {
             "day": 6,
-            "task": "学习数据与检索相关能力，了解 DocumentLoader、TextSplitter、VectorStore、Retriever，完成简单文档问答 Demo"
+            "task": "进行综合实战，将Chain、RAG、Agent和Memory结合，搭建一个个人知识库问答助手或简单客服机器人。"
         },
         {
             "day": 7,
-            "task": "综合实践，整合前面所学内容完成一个可运行的小型项目，例如智能客服、文档问答助手或个人知识库查询工具，并复盘学习过程"
+            "task": "学习应用部署与调试基础，了解LangServe、回调监控、日志排查和性能优化，整理一周学习笔记与进阶路线，完善个人项目。"
         }
     ]
 }
