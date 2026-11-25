@@ -144,7 +144,7 @@ def desensitize(text):
     """
     # 手机号：保留前3后4位，中间4位替换为****
     text = re.sub(r"(1[3-9]\d)\d{4}(\d{4})", r"\1****\2", text)
-    # 身份证号：前6位替换为******，保留后面
+    # 身份证号：前14位替换为******，保留后面
     text = re.sub(r"\d{6}\d{8}(\d{3}[\dxX])", r"******\1", text)
     # 邮箱：用户名部分脱敏，保留@域名
     text = re.sub(r"([\w.])[\w.]*(@[\w.]+)", r"\1***\2", text)
@@ -175,7 +175,7 @@ def dedup_exact(chunks):
     result = []
     # 遍历每一个分块
     for chunk in chunks:
-        # 将文本编码，计算md5哈希值作为文本指纹
+        # 将文本编码，计算md5哈希值作为文本指纹 如果两句话一模一样，哈希值一定一样
         h = hashlib.md5(chunk.encode("utf-8")).hexdigest()
         # 如果指纹不在已存在集合
         if h not in seen:
@@ -215,7 +215,8 @@ def dedup_near(chunks, threshold=0.9):
     result = []
     # 遍历每个chunk
     for chunk in chunks:
-        # 判断是否和已保留的任意文本相似度超过阈值
+        # 判断是否和已保留的任意文本相似度超过阈值 每一次的新文本都会跟已经存下来的所有文本比一遍，如果相似度超过了90%就是废话
+        # 缺点时间复杂度比较高
         is_dup = any(jaccard_similarity(chunk, kept) > threshold for kept in result )
         # 不是重复内容，则加入结果
         if not is_dup:
@@ -283,11 +284,11 @@ class TextCleaner:
         :param chunks: chunk文本数组
         :return: 过滤+去重后的chunk列表
         """
-        # 1. 质量过滤，丢掉不合格chunk
+        # 1. 质量过滤，丢掉不合格chunk 废品
         chunks = [c for c in chunks if is_valid_chunk(c)]
-        # 2. 精确哈希去重
+        # 2. 精确哈希去重 去掉一模一样
         chunks = dedup_exact(chunks)
-        # 3. 近似相似度去重
+        # 3. 近似相似度去重 去掉差不多一样
         chunks = dedup_near(chunks)
         return chunks
 
