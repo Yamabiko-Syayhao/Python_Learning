@@ -12,7 +12,7 @@ OCR 识别（PaddleOCR）
 ↓
 按坐标还原阅读顺序
 ↓
-清洗（去页眉页脚/水印噪音） # TODO::
+清洗（去页眉页脚/水印噪音）
 ↓
 Chunk → Embedding → VectorDB
 """
