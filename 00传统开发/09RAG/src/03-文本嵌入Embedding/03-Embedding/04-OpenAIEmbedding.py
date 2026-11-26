@@ -32,6 +32,7 @@ embedding = resp.data[0].embedding
 # -------------------4.计算相似度：余弦相似度函数 -------------------
 def cosine_similarity(vec1, vec2):
     # np.dot：求两个向量的点积；np.linalg.norm：求向量的模长；余弦相似度=点积除以两个向量模的乘积
+    # 取值范围是 -1 到 1
     return np.dot(vec1, vec2) / (np.linalg.norm(vec1) * np.linalg.norm(vec2))
 
 

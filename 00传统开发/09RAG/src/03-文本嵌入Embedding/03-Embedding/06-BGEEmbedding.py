@@ -75,7 +75,7 @@ def cosine_similarity(vec1, vec2):
     # 值越靠近1代表语义越相似；越靠近‑1语义差距越大
     return np.dot(vec1, vec2) / (np.linalg.norm(vec1) * np.linalg.norm(vec2))
 
-# TODO:: 参考 06 将剩余步骤补全
+
 # --------------------------6.构造FAQ知识库，构建内存版本地向量库（参考前面openai版本RAG）--------------------------
 # 模拟企业FAQ知识库
 faq_docs = [
