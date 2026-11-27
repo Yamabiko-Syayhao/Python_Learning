@@ -12,7 +12,7 @@ import os
 client = OpenAI(
     api_key=os.getenv("DASHSCOPE_API_KEY"),
     # 以下为华北2（北京）地域的URL，各地域的URL不同。调用时请将{WorkspaceId}替换为真实的业务空间ID。
-    base_url="https://ws-lb7fb82qnmqlboi9.cn-beijing.maas.aliyuncs.com/compatible-mode/v1",
+    base_url="https://ws-bggm9k3qgbthz61a.cn-beijing.maas.aliyuncs.com/compatible-mode/v1",
 )
 # 可选向量模型：text‑embedding‑ada‑002、text‑embedding‑3‑small、text‑embedding‑3‑large
 # 准备一段测试文本
