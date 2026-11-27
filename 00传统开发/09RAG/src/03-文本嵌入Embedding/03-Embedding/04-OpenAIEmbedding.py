@@ -96,7 +96,7 @@ def search(query, top_k=3):
     results.sort(key=lambda x: x['score'], reverse=True)
     # 返回相似度最高前top_k条结果
     return results[:top_k]
-
+# 属于暴力检索，向量数据库中有多少条就比对多少次
 
 # -------------------3.测试检索，模拟用户提问 -------------------
 # query = '订单怎么退款'
